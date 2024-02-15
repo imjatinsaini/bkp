@@ -1,0 +1,3 @@
+.image-transition {
+    transition: top 1s ease, right 1s ease, width 1s ease;
+}

@@ -1,0 +1,58 @@
+.navbox-btn{
+    color: #000 !important;
+    gap: 20px !important;
+    margin-right: 10px !important;
+}
+
+.navbox-btn:hover{
+    color: #ff7722 !important;
+    box-shadow: none !important;
+}
+
+.nav-logo-box{
+    justify-content: center !important;
+    align-items: center;
+}
+
+.navbox{
+    margin-left: 50px;
+}
+
+.nav-logo-text{
+    font-weight: bold !important;
+    font-size: 16px !important;
+    color: #ff7722 !important;
+}
+
+.nav-menu-icon{
+    margin-right: 20px !important;
+}
+
+.nav-userbox{
+    position: absolute !important;
+    right: 20px;
+}
+
+.menu-item{
+    color: black !important ;
+    opacity: 60%;
+    box-shadow: none !important;
+}
+
+.menu .MuiPaper-root{
+    background-color: white;
+    box-shadow: none;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding-right: 16px;
+}
+
+.navbox-btn:hover + .menu-item{
+    color: blue !important;
+}
+
+.menu-item:hover{
+    color: #ff7722 !important;
+    background-color: transparent !important;
+    font-size: 16px !important;
+}
