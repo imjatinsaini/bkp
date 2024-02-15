@@ -140,10 +140,12 @@ function Item({ item }) {
                         <Box marginRight='5%' marginBottom='8%'>
                             <Typography style={{ fontSize: '16px' }}>{item.subheading}</Typography>
                         </Box>
-                        <Box marginBottom='8%'>
-                            <Button style={{borderRadius: '35px', backgroundColor: '#f24e1e', color: 'white', padding: '2.5%'}}>{item.btnText}</Button>
+                        {item.btnText && item.btnText.trim() !== '' && (
+                        <Box >
+                            <Button style={{borderRadius: '35px', backgroundColor: '#f24e1e', color: 'white', padding: '2.0%'}}>{item.btnText}</Button>
                         </Box>
-                        <Box marginBottom='10%'>
+                        )}
+                        <Box marginBottom='10%' marginTop='8%'>
                             <Typography style={{ fontSize: '16px', fontWeight: 'bold' }}>{item.quote}</Typography>
                         </Box>
                     </Box>

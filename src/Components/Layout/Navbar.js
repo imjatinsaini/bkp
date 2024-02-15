@@ -31,22 +31,67 @@ const Navbar = () => {
 
   const [sidebar, setSidebar] = useState(false)
 
-  const [menu, setMenu] = useState(false)
-  const openMenu = Boolean(menu)
+  const [mandir, setMandir] = useState(false)
+  const openMandir = Boolean(mandir)
+  
+  const [services, setServices] = useState(false)
+  const openServices = Boolean(services)
+
+  const [shops, setShops] = useState(false)
+  const openShops = Boolean(shops)
+
+  const [library, setLibrary] = useState(false)
+  const openLibrary = Boolean(library)
+
+  const [wellness, setWellness] = useState(false)
+  const openWellness = Boolean(wellness)
 
   const [userbox, setUserbox] = useState(false)
   const openUserbox = Boolean(userbox)
 
-  const handleMenu = (event) => {
-    setMenu(event.currentTarget)
+  
+  const handleMandir = (event) => {
+    setMandir(event.currentTarget)
+  }
+
+  const handleServices = (event) => {
+    setServices(event.currentTarget)
+  }
+
+  const handleLibrary = (event) => {
+    setLibrary(event.currentTarget)
+  }
+
+  const handleWellness = (event) => {
+    setWellness(event.currentTarget)
+  }
+
+  const handleShops = (event) => {
+    setShops(event.currentTarget)
   }
 
   const handleUserbox = (event) => {
     setUserbox(event.currentTarget)
   }
 
-  const closeMenu = () => {
-    setMenu(menu => !menu)
+  const closeMandir = () => {
+    setMandir(mandir => !mandir)
+  }
+
+  const closeServices = () => {
+    setServices(services => !services)
+  }
+
+  const closeShops = () => {
+    setShops(shops => !shops)
+  }
+
+  const closeLibrary = () => {
+    setLibrary(library => !library)
+  }
+
+  const closeWellnes = () => {
+    setWellness(wellness => !wellness)
   }
 
   const closeUserbox = () => {
@@ -86,11 +131,11 @@ const Navbar = () => {
             </LogoBox>
             <NavBox className='navbox' sx={{ display: { xs: 'none', sm: 'none', md: 'none', lg: 'block', xl: 'block' } }}>
               <Button variant='text' className='navbox-btn'>Home</Button>
-              <Button variant='text' className='navbox-btn' id='shops-btn' onClick={handleMenu} aria-controls={openMenu ? 'shops-menu' : undefined} aria-haspopup='true' aria-expanded={openMenu ? 'true' : undefined} >Mandir ⮟</Button>
-              <Button variant='text' className='navbox-btn'>Our Services ⮟</Button>
-              <Button variant='text' className='navbox-btn' id='shops-btn' onClick={handleMenu} aria-controls={openMenu ? 'shops-menu' : undefined} aria-haspopup='true' aria-expanded={openMenu ? 'true' : undefined} >Shops ⮟</Button>
-              <Button variant='text' className='navbox-btn'>Sanatan Library ⮟</Button>
-              <Button variant='text' className='navbox-btn'>Wellness Practice ⮟</Button>
+              <Button variant='text' className='navbox-btn' id='mandir-btn' onClick={handleMandir} aria-controls={openMandir ? 'mandir-menu' : undefined} aria-haspopup='true' aria-expanded={openMandir ? 'true' : undefined} >Mandir ⮟</Button>
+              <Button variant='text' className='navbox-btn' onClick={handleServices} aria-controls={openServices ? 'services-menu' : undefined} aria-haspopup='true' aria-expanded={openServices ? 'true' : undefined} >Our Services ⮟</Button>
+              <Button variant='text' className='navbox-btn' id='shops-btn' onClick={handleShops} aria-controls={openShops ? 'shops-menu' : undefined} aria-haspopup='true' aria-expanded={openShops ? 'true' : undefined} >Shops ⮟</Button>
+              <Button variant='text' className='navbox-btn' onClick={handleLibrary} aria-controls={openLibrary ? 'library-menu' : undefined} aria-haspopup='true' aria-expanded={openLibrary ? 'true' : undefined} >Sanatan Library ⮟</Button>
+              <Button variant='text' className='navbox-btn' onClick={handleWellness} aria-controls={openWellness ? 'mandir-menu' : undefined} aria-haspopup='true' aria-expanded={openWellness ? 'true' : undefined} >Wellness Practice ⮟</Button>
               <Button variant='text' className='navbox-btn'>Blogs</Button>
               <Button variant='text' className='navbox-btn'>Donate</Button>
             </NavBox>
@@ -101,7 +146,29 @@ const Navbar = () => {
                 <Avatar sx={{ width: 30, height: 30 }} src='/images/icons/profile.png' />
               </IconButton  >
             </UserBox>
-            <Menu id='shops-menu' anchorEl={menu} open={openMenu} MenuListProps={{ "aria-labelledby": 'shops-btn', }} onClose={closeMenu} className='menu'>
+
+            {/* MANDIR MENU */}
+            <Menu id='mandir-menu' anchorEl={mandir} open={openMandir} MenuListProps={{ "aria-labelledby": 'mandir-btn', }} onClose={closeMandir} className='menu'>
+              <MenuItem className='menu-item' autoFocus={false}>North India</MenuItem>
+              <MenuItem className='menu-item'>West India</MenuItem>
+              <MenuItem className='menu-item'>East India</MenuItem>
+              <MenuItem className='menu-item'>South India</MenuItem>
+            </Menu>
+
+            {/* SERVICES MENU */}
+            <Menu id='services-menu' anchorEl={services} open={openServices} MenuListProps={{ "aria-labelledby": 'services-btn', }} onClose={closeServices} className='menu'>
+              <MenuItem className='menu-item' autoFocus={false}>Puja</MenuItem>
+              <MenuItem className='menu-item'>Prasad</MenuItem>
+              <MenuItem className='menu-item'>Hawan</MenuItem>
+              <MenuItem className='menu-item'>Darashan</MenuItem>
+              <MenuItem className='menu-item'>Astrology</MenuItem>
+              <MenuItem className='menu-item'>Brahman Bhoj</MenuItem>
+              <MenuItem className='menu-item'>Pandit Ji Request</MenuItem>
+              <MenuItem className='menu-item'>Special Travel Guide</MenuItem>
+            </Menu>
+
+            {/* SHOPS MENU */}
+            <Menu id='shops-menu' anchorEl={shops} open={openShops} MenuListProps={{ "aria-labelledby": 'shops-btn', }} onClose={closeShops} className='menu'>
               <MenuItem className='menu-item' autoFocus={false}>Books</MenuItem>
               <MenuItem className='menu-item'>Body Care</MenuItem>
               <MenuItem className='menu-item'>Clothing</MenuItem>
@@ -112,14 +179,37 @@ const Navbar = () => {
               <MenuItem className='menu-item'>Spiritual Accessories</MenuItem>
               <MenuItem className='menu-item'>Yoga Store</MenuItem>
             </Menu>
-            <Menu id='userbox-menu' anchorEl={userbox} open={openUserbox} MenuListProps={{ "aria-labelledby": 'user-btn', }} onClose={closeUserbox} className='menu'>
-              <NavLink to="/login"><MenuItem className='menu-item' autoFocus={false}>Login</MenuItem></NavLink>
-              <NavLink to="/create-account"><MenuItem className='menu-item'>Create Account</MenuItem></NavLink>
-              <Box border='1px solid red' marginLeft='10%'>
+
+            {/* LIBRARY MENU */}
+            <Menu id='library-menu' anchorEl={library} open={openLibrary} MenuListProps={{ "aria-labelledby": 'library-btn', }} onClose={closeLibrary} className='menu'>
+              <MenuItem className='menu-item' autoFocus={false}>Ved Pujan Upnishd</MenuItem>
+              <MenuItem className='menu-item'>Audio</MenuItem>
+              <MenuItem className='menu-item'>Video</MenuItem>
+            </Menu>
+
+            {/* WELLNESS MENU */}
+            <Menu id='wellness-menu' anchorEl={wellness} open={openWellness} MenuListProps={{ "aria-labelledby": 'wellness-btn', }} onClose={closeWellnes} className='menu'>
+              <MenuItem className='menu-item' autoFocus={false}>Yoga</MenuItem>
+              <MenuItem className='menu-item'>Meditation</MenuItem>
+            </Menu>
+
+            {/* USER BOX MENU */}
+            <Menu id='userbox-menu' anchorEl={userbox} open={openUserbox} MenuListProps={{ "aria-labelledby": 'user-btn', }} onClose={closeUserbox} className='menu' style={{ marginRight: '1%', marginLeft: '7%' }}>
+              <Box marginLeft='5%' >
                 <Box>
-                  Namaste 🙏
+                  <Typography fontSize='16px' fontWeight='500' color='#f24e1e'>Namaste 🙏</Typography>
                   <Box sx={{ width: '100%', border: 'none', borderTop: '2px solid black', marginBottom: '2%' }} mx='auto' />
                 </Box>
+                <Typography fontSize='12px'>To access your account and manage order</Typography>
+                <Box marginTop='3%' marginBottom='3%'>
+                  <Button style={{ backgroundColor: '#f24e1e', color: 'white', width: '100%', borderRadius: '10px' }}>LOGIN / SIGN UP</Button>
+                </Box>
+                <Typography fontSize='12px' >
+                  By Logging In/Signing up. I agree to the
+                  <span style={{ color: '#f24e1e' }}> TERMS OF USE </span>
+                  &
+                  <span style={{ color: '#f24e1e' }}> PRIVACY POLICY </span>
+                </Typography>
               </Box>
             </Menu>
           </Box>

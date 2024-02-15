@@ -24,9 +24,9 @@ const Footer = () => {
                     </Box>
                 </Grid>
                 <Grid item md={1.6}>
-                    <Box paddingLeft='5%'>
+                    <Box paddingLeft='0%'>
 
-                        <Typography fontSize='20px' fontWeight='bold' color='white'>Shop</Typography>
+                        <Typography fontSize='20px' fontWeight='bold' color='white' marginLeft='4%'>Shop</Typography>
                         <Box display='flex' flexDirection='column' alignItems='start'>
                             <IconButton>
                                 <Typography fontSize='16px' fontWeight='500' color='white'>Rudraksha</Typography>
@@ -60,7 +60,7 @@ const Footer = () => {
                 </Grid>
                 <Grid item md={1.6}>
                     <Box paddingLeft='5%'>
-                        <Typography fontSize='20px' fontWeight='bold' color='white'>Services</Typography>
+                        <Typography fontSize='20px' fontWeight='bold' color='white' marginLeft='4%'>Services</Typography>
                         <Box display='flex' flexDirection='column' alignItems='start'>
                             <IconButton>
                                 <Typography fontSize='16px' fontWeight='500' color='white'>Puja</Typography>
@@ -82,7 +82,7 @@ const Footer = () => {
                 </Grid>
                 <Grid item md={1.6}>
                     <Box paddingLeft='5%'>
-                        <Typography fontSize='20px' fontWeight='bold' color='white'>Quick Links</Typography>
+                        <Typography fontSize='20px' fontWeight='bold' color='white' marginLeft='4%'>Quick Links</Typography>
                         <Box display='flex' flexDirection='column' alignItems='start'>
                             <IconButton>
                                 <Typography fontSize='16px' fontWeight='500' color='white'>About Us</Typography>
@@ -104,7 +104,7 @@ const Footer = () => {
                 </Grid>
                 <Grid item md={1.6}>
                     <Box paddingLeft='5%'>
-                        <Typography fontSize='20px' fontWeight='bold' color='white'>Lifestyle</Typography>
+                        <Typography fontSize='20px' fontWeight='bold' color='white' marginLeft='4%'>Lifestyle</Typography>
                         <Box display='flex' flexDirection='column' alignItems='start'>
                             <IconButton>
                                 <Typography fontSize='16px' fontWeight='500' color='white'>Yoga</Typography>
@@ -117,7 +117,7 @@ const Footer = () => {
                 </Grid>
                 <Grid item md={1.6}>
                     <Box paddingLeft='5%'>
-                        <Typography fontSize='20px' fontWeight='bold' color='white'>Quick Links</Typography>
+                        <Typography fontSize='20px' fontWeight='bold' color='white' marginLeft='4%'>Quick Links</Typography>
                         <Box display='flex' flexDirection='column' alignItems='start'>
                             <IconButton>
                                 <Typography fontSize='16px' fontWeight='500' color='white'>Contact Us</Typography>
