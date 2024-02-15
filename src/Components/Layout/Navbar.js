@@ -33,7 +33,7 @@ const Navbar = () => {
 
   const [mandir, setMandir] = useState(false)
   const openMandir = Boolean(mandir)
-  
+
   const [services, setServices] = useState(false)
   const openServices = Boolean(services)
 
@@ -49,7 +49,7 @@ const Navbar = () => {
   const [userbox, setUserbox] = useState(false)
   const openUserbox = Boolean(userbox)
 
-  
+
   const handleMandir = (event) => {
     setMandir(event.currentTarget)
   }
@@ -202,7 +202,9 @@ const Navbar = () => {
                 </Box>
                 <Typography fontSize='12px'>To access your account and manage order</Typography>
                 <Box marginTop='3%' marginBottom='3%'>
-                  <Button style={{ backgroundColor: '#f24e1e', color: 'white', width: '100%', borderRadius: '10px' }}>LOGIN / SIGN UP</Button>
+                  <NavLink to='/login'>
+                    <Button style={{ backgroundColor: '#f24e1e', color: 'white', width: '100%', borderRadius: '10px' }}>LOGIN / SIGN UP</Button>
+                  </NavLink>
                 </Box>
                 <Typography fontSize='12px' >
                   By Logging In/Signing up. I agree to the
