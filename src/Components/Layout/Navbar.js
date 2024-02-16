@@ -149,10 +149,10 @@ const Navbar = () => {
 
             {/* MANDIR MENU */}
             <Menu id='mandir-menu' anchorEl={mandir} open={openMandir} MenuListProps={{ "aria-labelledby": 'mandir-btn', }} onClose={closeMandir} className='menu'>
-              <MenuItem className='menu-item' autoFocus={false}>North India</MenuItem>
-              <MenuItem className='menu-item'>West India</MenuItem>
-              <MenuItem className='menu-item'>East India</MenuItem>
-              <MenuItem className='menu-item'>South India</MenuItem>
+              <NavLink to='/north-mandir' style={{textDecoration: 'none'}}><MenuItem className='menu-item' autoFocus={false}>North India</MenuItem></NavLink>
+              <NavLink to='/west-mandir' style={{textDecoration: 'none'}}><MenuItem className='menu-item'>West India</MenuItem></NavLink>
+              <NavLink to='/east-mandir' style={{textDecoration: 'none'}}><MenuItem className='menu-item'>East India</MenuItem></NavLink>
+              <NavLink to='/south-mandir' style={{textDecoration: 'none'}}><MenuItem className='menu-item'>South India</MenuItem></NavLink>
             </Menu>
 
             {/* SERVICES MENU */}

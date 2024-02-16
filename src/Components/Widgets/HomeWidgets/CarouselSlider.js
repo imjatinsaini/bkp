@@ -74,7 +74,7 @@ function Item({ item }) {
         { top: '35%', right: '0%', width: '70%', zIndex: 2 },
     ])
 
-    {/* Anticlockwise rotation */ }
+    /* Anticlockwise rotation */
     useEffect(() => {
         const interval = setInterval(() => {
             setPositions(prevPositions => {
@@ -141,9 +141,9 @@ function Item({ item }) {
                             <Typography style={{ fontSize: '16px' }}>{item.subheading}</Typography>
                         </Box>
                         {item.btnText && item.btnText.trim() !== '' && (
-                        <Box >
-                            <Button style={{borderRadius: '35px', backgroundColor: '#f24e1e', color: 'white', padding: '2.0%'}}>{item.btnText}</Button>
-                        </Box>
+                            <Box >
+                                <Button style={{ borderRadius: '35px', backgroundColor: '#f24e1e', color: 'white', padding: '2.0%' }}>{item.btnText}</Button>
+                            </Box>
                         )}
                         <Box marginBottom='10%' marginTop='8%'>
                             <Typography style={{ fontSize: '16px', fontWeight: 'bold' }}>{item.quote}</Typography>
@@ -169,7 +169,7 @@ function Item({ item }) {
                             <Typography style={{ fontSize: '18px' }}>{item.subheading}</Typography>
                         </Box>
                         <Box marginBottom='15%'>
-                            <Button variant='outlined' color='secondary'>{item.btnText}</Button>
+                            <Button style={{ borderRadius: '35px', backgroundColor: '#f24e1e', color: 'white', padding: '2.0%' }}>{item.btnText}</Button>
                         </Box>
                         <Box marginBottom='20%'>
                             <Typography style={{ fontSize: '18px', fontWeight: 'bold' }}>{item.quote}</Typography>
@@ -195,7 +195,7 @@ function Item({ item }) {
                             <Typography style={{ fontSize: '10px' }}>{item.subheading}</Typography>
                         </Box>
                         <Box marginBottom='25%'>
-                            <Button variant='outlined' color='secondary' style={{height: '50px', width: '100px'}}>{item.btnText}</Button>
+                            <Button style={{ borderRadius: '35px', backgroundColor: '#f24e1e', color: 'white', padding: '2.0%' }}>{item.btnText}</Button>
                         </Box>
                         <Box marginBottom='20%'>
                             <Typography style={{ fontSize: '10px', fontWeight: 'bold' }}>{item.quote}</Typography>
@@ -221,7 +221,7 @@ function Item({ item }) {
                             <Typography style={{ fontSize: '15px' }}>{item.subheading}</Typography>
                         </Box>
                         <Box marginBottom='15%'>
-                            <Button variant='outlined' color='secondary' style={{height: '50px', width: '100px'}}>{item.btnText}</Button>
+                            <Button style={{ borderRadius: '35px', backgroundColor: '#f24e1e', color: 'white', padding: '2.0%' }}>{item.btnText}</Button>
                         </Box>
                         <Box marginBottom='20%'>
                             <Typography style={{ fontSize: '15px', fontWeight: 'bold' }}>{item.quote}</Typography>

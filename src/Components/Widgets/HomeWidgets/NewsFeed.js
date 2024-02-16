@@ -1,6 +1,6 @@
 import { ArrowForward, FavoriteBorder, IosShare, Visibility } from '@mui/icons-material'
 import { Box, Button, Grid, IconButton, Paper, Typography } from '@mui/material'
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 
 const NewsFeed = () => {
 
@@ -14,21 +14,21 @@ const NewsFeed = () => {
             { /* For larger screens than sm */}
             <Box display={{ xs: 'none', sm: 'none', md: 'flex', lg: 'flex' }} justifyContent='center' marginLeft='30%' marginRight='30%' marginTop='2%'>
                 <Paper variant='outlined' style={{ background: 'transparent', marginTop: '1.4%', marginRight: '1.5%', border: 'none' }}>
-                    <img src='/images/home/services_sign.png' width='13px' height='16px' />
+                    <img src='/images/home/services_sign.png' alt='services sign' width='13px' height='16px' />
                 </Paper>
                 <Typography color='black' fontSize='24px' marginTop='1%'>BLOG</Typography>
                 <Paper variant='outlined' style={{ background: 'transparent', marginTop: '1.4%', marginLeft: '1.5%', border: 'none' }}>
-                    <img src='/images/home/services_sign.png' width='13px' height='16px' />
+                    <img src='/images/home/services_sign.png' alt='services sign' width='13px' height='16px' />
                 </Paper>
             </Box>
             { /* For sm and smaller screens */}
             <Box display={{ xs: 'flex', sm: 'flex', md: 'none', lg: 'none' }} justifyContent='center' marginLeft='30%' marginRight='30%' marginTop='3%'>
                 <Paper variant='outlined' style={{ background: 'transparent', marginTop: '0.8%', marginRight: '1.5%', border: 'none' }}>
-                    <img src='/images/home/services_sign.png' width='11px' height='13px' />
+                    <img src='/images/home/services_sign.png' alt='services sign' width='11px' height='13px' />
                 </Paper>
                 <Typography color='black' fontSize='18px' marginTop='1%'>BLOG</Typography>
                 <Paper variant='outlined' style={{ background: 'transparent', marginTop: '0.8%', marginLeft: '1.5%', border: 'none' }}>
-                    <img src='/images/home/services_sign.png' width='11px' height='13px' />
+                    <img src='/images/home/services_sign.png' alt='services sign' width='11px' height='13px' />
                 </Paper>
             </Box>
 
@@ -51,10 +51,10 @@ const NewsFeed = () => {
                 <Grid item md={3} display={{ xs: 'none', sm: 'none', md: 'block', lg: 'block' }} marginRight='5%' marginLeft='4%' >
                     <Box>
                         <Paper variant='outlined' style={{ background: 'transparent', display: 'flex', flexDirection: 'column', borderRadius: '20px' }}>
-                        <img src= {isPongal ? '/images/home/news_pongal_hover.png': '/images/home/news_pongal.png' } width='100%' onMouseOver={()=>setIsPongal(true)} onMouseOut={()=>setIsPongal(false)} />
+                            <img src={isPongal ? '/images/home/news_pongal_hover.png' : '/images/home/news_pongal.png'} alt='ponga news' width='100%' onMouseOver={() => setIsPongal(true)} onMouseOut={() => setIsPongal(false)} />
                             <Box paddingLeft='4.5%' paddingRight='4.5%' bgcolor='white' paddingBottom='5%' borderRadius='0px 0px 15px 15px'>
-                                <Typography style={{ fontSize: '30px' }}>What to do on Pongal?</Typography>
-                                <Typography style={{ fontSize: '12px', fontWeight: '500', opacity: '70%' }}>Pongal is a popular harvest festival celebrated in the southern Indian state of Tamil Nadu. It is a time for expressing gratitude to the sun god for a bountiful harvest. Here are some traditional activities.....................read more.</Typography>
+                                <Typography style={{ fontSize: '24px', fontWeight: '500', marginTop: '3%' }}>What to do on Pongal?</Typography>
+                                <Typography style={{ fontSize: '14px', fontWeight: '500', opacity: '70%' }}>Pongal is a popular harvest festival celebrated in the southern Indian state of Tamil Nadu. It is a time for expressing gratitude to the sun god for a bountiful harvest. Here are some traditional activities.....................read more.</Typography>
                                 <Box display='flex' flexDirection='row' justifyContent='start' marginTop='3%'>
                                     <Box display='flex' alignItems='center' justifyItems='center'>
                                         <IconButton disabled style={{ color: '#1aa11f' }}> <Visibility /> </IconButton>
@@ -76,10 +76,10 @@ const NewsFeed = () => {
                 <Grid item md={3} display={{ xs: 'none', sm: 'none', md: 'block', lg: 'block' }} marginRight='5%' marginLeft='4%' >
                     <Box>
                         <Paper variant='outlined' style={{ background: 'transparent', display: 'flex', flexDirection: 'column', borderRadius: '20px' }}>
-                        <img src= {isHoli ? '/images/home/news_holi_hover.png': '/images/home/news_holi.png' } width='100%' onMouseOver={()=>setIsHoli(true)} onMouseOut={()=>setIsHoli(false)} />
+                            <img src={isHoli ? '/images/home/news_holi_hover.png' : '/images/home/news_holi.png'} alt='holi news' width='100%' onMouseOver={() => setIsHoli(true)} onMouseOut={() => setIsHoli(false)} />
                             <Box paddingLeft='4.5%' paddingRight='4.5%' bgcolor='white' paddingBottom='5%' borderRadius='0px 0px 15px 15px'>
-                                <Typography style={{ fontSize: '30px' }}>What to do on Holi?</Typography>
-                                <Typography style={{ fontSize: '12px', fontWeight: '500', opacity: '70%' }}>On the day of Holi, families and friends gather in their backyards, terraces, neighborhoods, or driveways (like us) to play Holi with brightly colored powders to throw and smear on clothes. Let this festival burn all negativity and bring positivity in life.....read more.</Typography>
+                                <Typography style={{ fontSize: '24px', fontWeight: '500', marginTop: '3%' }}>What to do on Holi?</Typography>
+                                <Typography style={{ fontSize: '14px', fontWeight: '500', opacity: '70%' }}>On the day of Holi, families and friends gather in their backyards, terraces, neighborhoods, or driveways (like us) to play Holi with brightly colored powders to throw and smear on clothes ....read more.</Typography>
                                 <Box display='flex' flexDirection='row' justifyContent='start' marginTop='3%'>
                                     <Box display='flex' alignItems='center' justifyItems='center'>
                                         <IconButton disabled style={{ color: '#1aa11f' }}> <Visibility /> </IconButton>
@@ -101,10 +101,10 @@ const NewsFeed = () => {
                 <Grid item md={3} display={{ xs: 'none', sm: 'none', md: 'block', lg: 'block' }} marginRight='0%' marginLeft='4%' >
                     <Box>
                         <Paper variant='outlined' style={{ background: 'transparent', display: 'flex', flexDirection: 'column', borderRadius: '20px' }}>
-                        <img src= {isDiwali ? '/images/home/news_diwali_hover.png': '/images/home/news_diwali.png' } width='100%' onMouseOver={()=>setIsDiwali(true)} onMouseOut={()=>setIsDiwali(false)} />
+                            <img src={isDiwali ? '/images/home/news_diwali_hover.png' : '/images/home/news_diwali.png'} alt='diwali news' width='100%' onMouseOver={() => setIsDiwali(true)} onMouseOut={() => setIsDiwali(false)} />
                             <Box paddingLeft='4.5%' paddingRight='4.5%' bgcolor='white' paddingBottom='5%' borderRadius='0px 0px 15px 15px'>
-                                <Typography style={{ fontSize: '30px' }}>What to do on Pongal?</Typography>
-                                <Typography style={{ fontSize: '12px', fontWeight: '500', opacity: '70%' }}>During Diwali, also known as the Festival of Lights, there are several cherished traditions to partake in. Homes are meticulously cleaned and adorned. May the light of the diyas guide you towards the path of happiness and success......read more.</Typography>
+                                <Typography style={{ fontSize: '24px', fontWeight: '500', marginTop: '3%' }}>What to do on Diwali?</Typography>
+                                <Typography style={{ fontSize: '14px', fontWeight: '500', opacity: '70%' }}>During Diwali, also known as the Festival of Lights, there are several cherished traditions to partake in. Homes are meticulously cleaned and adorned with colorful rangoli patterns, twinkling diyas, and vibrant......read more.</Typography>
                                 <Box display='flex' flexDirection='row' justifyContent='start' marginTop='3%'>
                                     <Box display='flex' alignItems='center' justifyItems='center'>
                                         <IconButton disabled style={{ color: '#1aa11f' }}> <Visibility /> </IconButton>
@@ -128,10 +128,10 @@ const NewsFeed = () => {
                 <Grid item md={3} display={{ xs: 'block', sm: 'block', md: 'none', lg: 'none' }} marginRight='8%' marginLeft='4%' marginBottom='4%'  >
                     <Box>
                         <Paper variant='outlined' style={{ background: 'transparent', display: 'flex', flexDirection: 'column', borderRadius: '20px' }}>
-                            <img src='/images/home/news_pongal.png' width='100%' />
+                            <img src='/images/home/news_pongal.png' alt='pongal news' width='100%' />
                             <Box paddingLeft='4.5%' paddingRight='4.5%' bgcolor='white' paddingBottom='5%' borderRadius='0px 0px 15px 15px'>
-                                <Typography style={{ fontSize: '20px' }}>What to do on Pongal?</Typography>
-                                <Typography style={{ fontSize: '12px', fontWeight: '500', opacity: '70%' }}>Pongal is a popular harvest festival celebrated in the southern Indian state of Tamil Nadu. It is a time for expressing gratitude to the sun god for a bountiful harvest. Here are some traditional activities.....................read more.</Typography>
+                                <Typography style={{ fontSize: '24px', fontWeight: '500', marginTop: '3%' }}>What to do on Pongal?</Typography>
+                                <Typography style={{ fontSize: '14px', fontWeight: '500', opacity: '70%' }}>Pongal is a popular harvest festival celebrated in the southern Indian state of Tamil Nadu. It is a time for expressing gratitude to the sun god for a bountiful harvest. Here are some traditional activities.....................read more.</Typography>
                                 <Box display='flex' flexDirection='row' justifyContent='start' marginTop='3%'>
                                     <Box display='flex' alignItems='center' justifyItems='center'>
                                         <IconButton disabled style={{ color: '#1aa11f' }}> <Visibility /> </IconButton>
@@ -153,10 +153,10 @@ const NewsFeed = () => {
                 <Grid item md={3} display={{ xs: 'block', sm: 'block', md: 'none', lg: 'none' }} marginRight='8%' marginLeft='4%' marginBottom='4%'  >
                     <Box>
                         <Paper variant='outlined' style={{ background: 'transparent', display: 'flex', flexDirection: 'column', borderRadius: '20px' }}>
-                            <img src='/images/home/news_holi.png' width='100%' />
+                            <img src='/images/home/news_holi.png' alt='holi news' width='100%' />
                             <Box paddingLeft='4.5%' paddingRight='4.5%' bgcolor='white' paddingBottom='5%' borderRadius='0px 0px 15px 15px'>
-                                <Typography style={{ fontSize: '20px' }}>What to do on Pongal?</Typography>
-                                <Typography style={{ fontSize: '12px', fontWeight: '500', opacity: '70%' }}>On the day of Holi, families and friends gather in their backyards, terraces, neighborhoods, or driveways (like us) to play Holi with brightly colored powders to throw and smear on clothes ....read more.</Typography>
+                                <Typography style={{ fontSize: '24px', fontWeight: '500', marginTop: '3%' }}>What to do on Holi?</Typography>
+                                <Typography style={{ fontSize: '14px', fontWeight: '500', opacity: '70%' }}>On the day of Holi, families and friends gather in their backyards, terraces, neighborhoods, or driveways (like us) to play Holi with brightly colored powders to throw and smear on clothes ....read more.</Typography>
                                 <Box display='flex' flexDirection='row' justifyContent='start' marginTop='3%'>
                                     <Box display='flex' alignItems='center' justifyItems='center'>
                                         <IconButton disabled style={{ color: '#1aa11f' }}> <Visibility /> </IconButton>
@@ -178,10 +178,10 @@ const NewsFeed = () => {
                 <Grid item md={3} display={{ xs: 'block', sm: 'block', md: 'none', lg: 'none' }} marginRight='8%' marginLeft='4%' marginBottom='4%'  >
                     <Box>
                         <Paper variant='outlined' style={{ background: 'transparent', display: 'flex', flexDirection: 'column', borderRadius: '20px' }}>
-                            <img src='/images/home/news_diwali.png' width='100%' />
+                            <img src='/images/home/news_diwali.png' alt='diwali news' width='100%' />
                             <Box paddingLeft='4.5%' paddingRight='4.5%' bgcolor='white' paddingBottom='5%' borderRadius='0px 0px 15px 15px'>
-                                <Typography style={{ fontSize: '20px' }}>What to do on Pongal?</Typography>
-                                <Typography style={{ fontSize: '12px', fontWeight: '500', opacity: '70%' }}>Pongal is a popular harvest festival celebrated in the southern Indian state of Tamil Nadu. It is a time for expressing gratitude to the sun god for a bountiful harvest. Here are some traditional activities.....................read more.</Typography>
+                                <Typography style={{ fontSize: '24px', fontWeight: '500', marginTop: '3%' }}>What to do on Diwali?</Typography>
+                                <Typography style={{ fontSize: '14px', fontWeight: '500', opacity: '70%' }}>During Diwali, also known as the Festival of Lights, there are several cherished traditions to partake in. Homes are meticulously cleaned and adorned with colorful rangoli patterns, twinkling diyas, and vibrant......read more.</Typography>
                                 <Box display='flex' flexDirection='row' justifyContent='start' marginTop='3%'>
                                     <Box display='flex' alignItems='center' justifyItems='center'>
                                         <IconButton disabled style={{ color: '#1aa11f' }}> <Visibility /> </IconButton>
@@ -203,14 +203,14 @@ const NewsFeed = () => {
             </Grid>
 
             { /* For larger screens than md */}
-            <Box display={{xs: 'none', sm: 'none', md: 'flex', lg: 'flex', xl: 'flex'}} justifyContent='center' marginTop='3%' paddingBottom='2%'>
-            <Button variant='outlined' endIcon={<ArrowForward />} style={{ backgroundColor: isBtn ? '#f24e1e' : 'transparent', color: isBtn ? 'white' : '#f24e1e', border: '1px solid #f24e1e', borderRadius: '20px', marginRight: '10px', fontWeight: 'bold', textTransform: 'none', boxShadow: isBtn ? '0px 2px 2px 2px rgba(0,0,0,0.15)' : 'none' }} onMouseOver={()=>setIsBtn(true)} onMouseOut={()=>setIsBtn(false)}>Read More</Button>
-            </Box> 
+            <Box display={{ xs: 'none', sm: 'none', md: 'flex', lg: 'flex', xl: 'flex' }} justifyContent='center' marginTop='3%' paddingBottom='2%'>
+                <Button variant='outlined' endIcon={<ArrowForward />} style={{ backgroundColor: isBtn ? '#f24e1e' : 'transparent', color: isBtn ? 'white' : '#f24e1e', border: '1px solid #f24e1e', borderRadius: '20px', marginRight: '10px', fontWeight: 'bold', textTransform: 'none', boxShadow: isBtn ? '0px 2px 2px 2px rgba(0,0,0,0.15)' : 'none' }} onMouseOver={() => setIsBtn(true)} onMouseOut={() => setIsBtn(false)}>Read More</Button>
+            </Box>
             { /* For larger screens than md */}
-            <Box display={{xs: 'flex', sm: 'flex', md: 'none', lg: 'none', xl: 'none'}} justifyContent='center' marginTop='3%' paddingBottom='5%'>
+            <Box display={{ xs: 'flex', sm: 'flex', md: 'none', lg: 'none', xl: 'none' }} justifyContent='center' marginTop='3%' paddingBottom='5%'>
                 <Button variant='outlined' endIcon={<ArrowForward />} style={{ backgroundColor: 'transparent', color: '#f24e1e', border: '1px solid #f24e1e', borderRadius: '20px', marginRight: '10px', fontWeight: 'bold', textTransform: 'none' }}>Read more</Button>
-            </Box>           
-            
+            </Box>
+
         </Box>
     )
 }
