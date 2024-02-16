@@ -102,7 +102,7 @@ const Navbar = () => {
     <>
 
       <AppBar position='static' style={{ boxShadow: 'none' }}>
-        <StyledToolbar style={{ height: '90px', boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.1)' }}>
+        <StyledToolbar style={{ height: '90px', boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.5)' }}>
           {/* <Typography variant='h6' sx={{display:{xs:'none',sm:'block'}}}>
           Bhagwan ka prasad
         </Typography>
