@@ -5,6 +5,8 @@ import React, {useState} from 'react'
 const NewsFeed = () => {
 
     const [isPongal, setIsPongal] = useState(false)
+    const [isHoli, setIsHoli] = useState(false)
+    const [isDiwali, setIsDiwali] = useState(false)
     const [isBtn, setIsBtn] = useState(false)
 
     return (
@@ -51,7 +53,7 @@ const NewsFeed = () => {
                         <Paper variant='outlined' style={{ background: 'transparent', display: 'flex', flexDirection: 'column', borderRadius: '20px' }}>
                         <img src= {isPongal ? '/images/home/news_pongal_hover.png': '/images/home/news_pongal.png' } width='100%' onMouseOver={()=>setIsPongal(true)} onMouseOut={()=>setIsPongal(false)} />
                             <Box paddingLeft='4.5%' paddingRight='4.5%' bgcolor='white' paddingBottom='5%' borderRadius='0px 0px 15px 15px'>
-                                <Typography style={{ fontSize: '36px' }}>What to do on Pongal?</Typography>
+                                <Typography style={{ fontSize: '30px' }}>What to do on Pongal?</Typography>
                                 <Typography style={{ fontSize: '12px', fontWeight: '500', opacity: '70%' }}>Pongal is a popular harvest festival celebrated in the southern Indian state of Tamil Nadu. It is a time for expressing gratitude to the sun god for a bountiful harvest. Here are some traditional activities.....................read more.</Typography>
                                 <Box display='flex' flexDirection='row' justifyContent='start' marginTop='3%'>
                                     <Box display='flex' alignItems='center' justifyItems='center'>
@@ -74,10 +76,10 @@ const NewsFeed = () => {
                 <Grid item md={3} display={{ xs: 'none', sm: 'none', md: 'block', lg: 'block' }} marginRight='5%' marginLeft='4%' >
                     <Box>
                         <Paper variant='outlined' style={{ background: 'transparent', display: 'flex', flexDirection: 'column', borderRadius: '20px' }}>
-                            <img src='/images/home/news_pongal.png' />
+                        <img src= {isHoli ? '/images/home/news_holi_hover.png': '/images/home/news_holi.png' } width='100%' onMouseOver={()=>setIsHoli(true)} onMouseOut={()=>setIsHoli(false)} />
                             <Box paddingLeft='4.5%' paddingRight='4.5%' bgcolor='white' paddingBottom='5%' borderRadius='0px 0px 15px 15px'>
-                                <Typography style={{ fontSize: '36px' }}>What to do on Pongal?</Typography>
-                                <Typography style={{ fontSize: '12px', fontWeight: '500', opacity: '70%' }}>Pongal is a popular harvest festival celebrated in the southern Indian state of Tamil Nadu. It is a time for expressing gratitude to the sun god for a bountiful harvest. Here are some traditional activities.....................read more.</Typography>
+                                <Typography style={{ fontSize: '30px' }}>What to do on Holi?</Typography>
+                                <Typography style={{ fontSize: '12px', fontWeight: '500', opacity: '70%' }}>On the day of Holi, families and friends gather in their backyards, terraces, neighborhoods, or driveways (like us) to play Holi with brightly colored powders to throw and smear on clothes. Let this festival burn all negativity and bring positivity in life.....read more.</Typography>
                                 <Box display='flex' flexDirection='row' justifyContent='start' marginTop='3%'>
                                     <Box display='flex' alignItems='center' justifyItems='center'>
                                         <IconButton disabled style={{ color: '#1aa11f' }}> <Visibility /> </IconButton>
@@ -99,10 +101,10 @@ const NewsFeed = () => {
                 <Grid item md={3} display={{ xs: 'none', sm: 'none', md: 'block', lg: 'block' }} marginRight='0%' marginLeft='4%' >
                     <Box>
                         <Paper variant='outlined' style={{ background: 'transparent', display: 'flex', flexDirection: 'column', borderRadius: '20px' }}>
-                            <img src='/images/home/news_pongal.png' />
+                        <img src= {isDiwali ? '/images/home/news_diwali_hover.png': '/images/home/news_diwali.png' } width='100%' onMouseOver={()=>setIsDiwali(true)} onMouseOut={()=>setIsDiwali(false)} />
                             <Box paddingLeft='4.5%' paddingRight='4.5%' bgcolor='white' paddingBottom='5%' borderRadius='0px 0px 15px 15px'>
-                                <Typography style={{ fontSize: '36px' }}>What to do on Pongal?</Typography>
-                                <Typography style={{ fontSize: '12px', fontWeight: '500', opacity: '70%' }}>Pongal is a popular harvest festival celebrated in the southern Indian state of Tamil Nadu. It is a time for expressing gratitude to the sun god for a bountiful harvest. Here are some traditional activities.....................read more.</Typography>
+                                <Typography style={{ fontSize: '30px' }}>What to do on Pongal?</Typography>
+                                <Typography style={{ fontSize: '12px', fontWeight: '500', opacity: '70%' }}>During Diwali, also known as the Festival of Lights, there are several cherished traditions to partake in. Homes are meticulously cleaned and adorned. May the light of the diyas guide you towards the path of happiness and success......read more.</Typography>
                                 <Box display='flex' flexDirection='row' justifyContent='start' marginTop='3%'>
                                     <Box display='flex' alignItems='center' justifyItems='center'>
                                         <IconButton disabled style={{ color: '#1aa11f' }}> <Visibility /> </IconButton>
@@ -151,10 +153,10 @@ const NewsFeed = () => {
                 <Grid item md={3} display={{ xs: 'block', sm: 'block', md: 'none', lg: 'none' }} marginRight='8%' marginLeft='4%' marginBottom='4%'  >
                     <Box>
                         <Paper variant='outlined' style={{ background: 'transparent', display: 'flex', flexDirection: 'column', borderRadius: '20px' }}>
-                            <img src='/images/home/news_pongal.png' width='100%' />
+                            <img src='/images/home/news_holi.png' width='100%' />
                             <Box paddingLeft='4.5%' paddingRight='4.5%' bgcolor='white' paddingBottom='5%' borderRadius='0px 0px 15px 15px'>
                                 <Typography style={{ fontSize: '20px' }}>What to do on Pongal?</Typography>
-                                <Typography style={{ fontSize: '12px', fontWeight: '500', opacity: '70%' }}>Pongal is a popular harvest festival celebrated in the southern Indian state of Tamil Nadu. It is a time for expressing gratitude to the sun god for a bountiful harvest. Here are some traditional activities.....................read more.</Typography>
+                                <Typography style={{ fontSize: '12px', fontWeight: '500', opacity: '70%' }}>On the day of Holi, families and friends gather in their backyards, terraces, neighborhoods, or driveways (like us) to play Holi with brightly colored powders to throw and smear on clothes ....read more.</Typography>
                                 <Box display='flex' flexDirection='row' justifyContent='start' marginTop='3%'>
                                     <Box display='flex' alignItems='center' justifyItems='center'>
                                         <IconButton disabled style={{ color: '#1aa11f' }}> <Visibility /> </IconButton>
@@ -176,7 +178,7 @@ const NewsFeed = () => {
                 <Grid item md={3} display={{ xs: 'block', sm: 'block', md: 'none', lg: 'none' }} marginRight='8%' marginLeft='4%' marginBottom='4%'  >
                     <Box>
                         <Paper variant='outlined' style={{ background: 'transparent', display: 'flex', flexDirection: 'column', borderRadius: '20px' }}>
-                            <img src='/images/home/news_pongal.png' width='100%' />
+                            <img src='/images/home/news_diwali.png' width='100%' />
                             <Box paddingLeft='4.5%' paddingRight='4.5%' bgcolor='white' paddingBottom='5%' borderRadius='0px 0px 15px 15px'>
                                 <Typography style={{ fontSize: '20px' }}>What to do on Pongal?</Typography>
                                 <Typography style={{ fontSize: '12px', fontWeight: '500', opacity: '70%' }}>Pongal is a popular harvest festival celebrated in the southern Indian state of Tamil Nadu. It is a time for expressing gratitude to the sun god for a bountiful harvest. Here are some traditional activities.....................read more.</Typography>
