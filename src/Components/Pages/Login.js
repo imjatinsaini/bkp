@@ -63,7 +63,7 @@ const Login = () => {
                         <Box display='flex' alignItems='center' justifyContent='center' marginTop='3%'>
                             <Typography>Don't have an account?</Typography>
                             <IconButton>
-                                <NavLink to="/create-account">
+                                <NavLink to="/create-account" style={{ textDecoration: 'none' }}>
                                     <Typography onClick={() => { }} style={{ color: '#f24e1e', cursor: 'pointer' }} >Sign Up</Typography>
                                 </NavLink>
                             </IconButton>

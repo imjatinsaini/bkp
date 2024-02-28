@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { AppBar, Avatar, Box, Button, Toolbar, Typography, Drawer, IconButton, Menu, MenuItem, Divider } from '@mui/material'
+import { AppBar, Avatar, Box, Button, Toolbar, Typography, Drawer, IconButton, Menu, MenuItem, Popover } from '@mui/material'
 import { MenuOutlined } from '@mui/icons-material'
 import styled from '@emotion/styled'
 import './../../Styles/Navbar.css'
@@ -101,8 +101,8 @@ const Navbar = () => {
   return (
     <>
 
-      <AppBar position='static' style={{ boxShadow: 'none' }}>
-        <StyledToolbar style={{ height: '90px', boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.5)' }}>
+      <AppBar position='fixed' style={{ boxShadow: 'none'}}>
+        <StyledToolbar style={{ height: '90px', boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.5)', }}>
           {/* <Typography variant='h6' sx={{display:{xs:'none',sm:'block'}}}>
           Bhagwan ka prasad
         </Typography>
@@ -127,11 +127,15 @@ const Navbar = () => {
           <Box display='flex' alignItems='center'>
             <LogoBox className='nav-logo-box'>
               <Box sx={{ width: 58, height: 62 }} component="img" alt="Cart" src="/images/logo.png" />
-              <Typography className='nav-logo-text'>भगवान का प्रसाद</Typography>
+              <NavLink to='/' style={{ textDecoration: 'none' }}><Typography className='nav-logo-text'>भगवान का प्रसाद</Typography></NavLink>
             </LogoBox>
             <NavBox className='navbox' sx={{ display: { xs: 'none', sm: 'none', md: 'none', lg: 'block', xl: 'block' } }}>
-              <Button variant='text' className='navbox-btn'>Home</Button>
-              <Button variant='text' className='navbox-btn' id='mandir-btn' onClick={handleMandir} aria-controls={openMandir ? 'mandir-menu' : undefined} aria-haspopup='true' aria-expanded={openMandir ? 'true' : undefined} >Mandir ⮟</Button>
+              <NavLink to='/' style={{ textDecoration: 'none' }}>
+                <Button variant='text' className='navbox-btn'>Home</Button>
+              </NavLink>
+              <Button variant='text' className='navbox-btn' id='mandir-btn' onClick={handleMandir} aria-controls={openMandir ? 'mandir-menu' : undefined} aria-haspopup='true' aria-expanded={openMandir ? 'true' : undefined} >
+                  Mandir ⮟
+              </Button>
               <Button variant='text' className='navbox-btn' onClick={handleServices} aria-controls={openServices ? 'services-menu' : undefined} aria-haspopup='true' aria-expanded={openServices ? 'true' : undefined} >Our Services ⮟</Button>
               <Button variant='text' className='navbox-btn' id='shops-btn' onClick={handleShops} aria-controls={openShops ? 'shops-menu' : undefined} aria-haspopup='true' aria-expanded={openShops ? 'true' : undefined} >Shops ⮟</Button>
               <Button variant='text' className='navbox-btn' onClick={handleLibrary} aria-controls={openLibrary ? 'library-menu' : undefined} aria-haspopup='true' aria-expanded={openLibrary ? 'true' : undefined} >Sanatan Library ⮟</Button>
@@ -149,10 +153,10 @@ const Navbar = () => {
 
             {/* MANDIR MENU */}
             <Menu id='mandir-menu' anchorEl={mandir} open={openMandir} MenuListProps={{ "aria-labelledby": 'mandir-btn', }} onClose={closeMandir} className='menu'>
-              <NavLink to='/north-mandir' style={{textDecoration: 'none'}}><MenuItem className='menu-item' autoFocus={false}>North India</MenuItem></NavLink>
-              <NavLink to='/west-mandir' style={{textDecoration: 'none'}}><MenuItem className='menu-item'>West India</MenuItem></NavLink>
-              <NavLink to='/east-mandir' style={{textDecoration: 'none'}}><MenuItem className='menu-item'>East India</MenuItem></NavLink>
-              <NavLink to='/south-mandir' style={{textDecoration: 'none'}}><MenuItem className='menu-item'>South India</MenuItem></NavLink>
+              <NavLink to='/north-mandir' style={{ textDecoration: 'none' }}><MenuItem className='menu-item' autoFocus={false}>North India</MenuItem></NavLink>
+              <NavLink to='/west-mandir' style={{ textDecoration: 'none' }}><MenuItem className='menu-item'>West India</MenuItem></NavLink>
+              <NavLink to='/east-mandir' style={{ textDecoration: 'none' }}><MenuItem className='menu-item'>East India</MenuItem></NavLink>
+              <NavLink to='/south-mandir' style={{ textDecoration: 'none' }}><MenuItem className='menu-item'>South India</MenuItem></NavLink>
             </Menu>
 
             {/* SERVICES MENU */}
@@ -202,7 +206,7 @@ const Navbar = () => {
                 </Box>
                 <Typography fontSize='12px'>To access your account and manage order</Typography>
                 <Box marginTop='3%' marginBottom='3%'>
-                  <NavLink to='/login'>
+                  <NavLink to='/login' style={{ textDecoration: 'none' }}>
                     <Button style={{ backgroundColor: '#f24e1e', color: 'white', width: '100%', borderRadius: '10px' }}>LOGIN / SIGN UP</Button>
                   </NavLink>
                 </Box>

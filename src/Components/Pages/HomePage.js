@@ -10,12 +10,14 @@ import NewsFeed from '../Widgets/HomeWidgets/NewsFeed';
 import TourGuide from '../Widgets/HomeWidgets/TourGuide';
 import WellnessPractice from '../Widgets/HomeWidgets/WellnessPractice';
 import Footer from '../Widgets/HomeWidgets/Footer';
+import NewNavbar from '../Layout/NewNavbar';
 
 const HomePage = () => {
 
   return (
     <Box bgcolor='#f8f7f4'>
-      <Navbar />
+      {/* <Navbar /> */}
+      <NewNavbar />
       <CarouselSlider />
       <Searchbar />
       <Services />

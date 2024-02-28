@@ -40,7 +40,7 @@ var slider = [
 
 const CarouselSlider = () => {
     return (
-        <Carousel indicators={true} animation='slide' duration={1000} autoPlay={false} navButtonsAlwaysVisible={true} >
+        <Carousel className='carousel' indicators={false} animation='slide' duration={1000} autoPlay={false} navButtonsAlwaysVisible={true}  >
             {
                 slider.map((item) => <Item key={item.id} item={item} />)
             }
@@ -129,9 +129,10 @@ function Item({ item }) {
     }, []);
 
     return (
-        <Box marginLeft='2%' marginRight='2%' marginTop='1%'>
+        <Box marginLeft='2%' marginRight='2%'>
             {/* For lg and big screens */}
-            <Grid container borderRadius='15px' style={{ backgroundImage: "url('/images/home/carousel_background.png')", backgroundSize: 'cover' }} display={{ xs: 'none', sm: 'none', md: 'none', lg: 'flex', xl: 'flex' }}>
+            {/* Experiment */}
+            <Grid container borderRadius='15px' style={{ background: '-webkit-linear-gradient(150deg, #f29d4b 56.31%, #ff7d00)',  }} display={{ xs: 'none', sm: 'none', md: 'none', lg: 'flex', xl: 'flex' }}>
                 <Grid item md={6} marginTop='7%'>
                     <Box marginLeft='5%'>
                         <Box marginTop='4%'>
@@ -159,7 +160,7 @@ function Item({ item }) {
                 </Grid>
             </Grid>
             {/* For md screen */}
-            <Grid container borderRadius='15px' style={{ backgroundImage: "url('/images/home/carousel_background.png')", backgroundSize: 'cover' }} display={{ xs: 'none', sm: 'none', md: 'flex', lg: 'none', xl: 'none' }}>
+            <Grid container borderRadius='15px' style={{ background: '-webkit-linear-gradient(150deg, #f29d4b 56.31%, #ff7d00)', backgroundSize: 'cover' }} display={{ xs: 'none', sm: 'none', md: 'flex', lg: 'none', xl: 'none' }}>
                 <Grid item md={6} marginTop='7%'>
                     <Box marginLeft='5%'>
                         <Box marginTop='7%'>
@@ -185,7 +186,7 @@ function Item({ item }) {
                 </Grid>
             </Grid>
             {/* For xs screen */}
-            <Grid container borderRadius='15px' style={{ backgroundImage: "url('/images/home/carousel_background.png')", backgroundSize: 'cover' }} display={{ xs: 'flex', sm: 'none', md: 'none', lg: 'none', xl: 'none' }}>
+            <Grid container borderRadius='15px' style={{ background: '-webkit-linear-gradient(150deg, #f29d4b 56.31%, #ff7d00)', backgroundSize: 'cover' }} display={{ xs: 'flex', sm: 'none', md: 'none', lg: 'none', xl: 'none' }}>
                 <Grid item xs={6} marginTop='10%'>
                     <Box marginLeft='5%'>
                         <Box marginTop='7%' marginBottom='10%'>
@@ -211,7 +212,7 @@ function Item({ item }) {
                 </Grid>
             </Grid>
             {/* For sm screen */}
-            <Grid container borderRadius='15px' style={{ backgroundImage: "url('/images/home/carousel_background.png')", backgroundSize: 'cover' }} display={{ xs: 'none', sm: 'flex', md: 'none', lg: 'none', xl: 'none' }}>
+            <Grid container borderRadius='15px' style={{ background: '-webkit-linear-gradient(150deg, #f29d4b 56.31%, #ff7d00)', backgroundSize: 'cover' }} display={{ xs: 'none', sm: 'flex', md: 'none', lg: 'none', xl: 'none' }}>
                 <Grid item sm={6} marginTop='10%'>
                     <Box marginLeft='5%'>
                         <Box marginTop='7%' marginBottom='10%'>

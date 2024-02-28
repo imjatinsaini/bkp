@@ -55,7 +55,7 @@ const Register = () => {
             <Box display='flex' alignItems='center' justifyContent='center' marginTop='1%'>
               <Typography>Already have an account?</Typography>
               <IconButton>
-                <NavLink to='/login'>
+                <NavLink to='/login' style={{ textDecoration: 'none' }}>
                   <Typography onClick={() => { }} style={{ color: '#f24e1e', cursor: 'pointer' }} >Log In</Typography>
                 </NavLink>
               </IconButton>
@@ -153,7 +153,7 @@ const Register = () => {
             </Box>
             <Box display='flex' alignItems='center' justifyContent='center' marginTop='7%'>
               <Typography>Already have an account?</Typography>
-              <NavLink to='/login'>
+              <NavLink to='/login' style={{ textDecoration: 'none' }}>
                 <Typography onClick={() => { }} style={{ color: '#f24e1e', cursor: 'pointer' }} >Log In</Typography>
               </NavLink>
             </Box>
