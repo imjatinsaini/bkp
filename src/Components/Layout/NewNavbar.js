@@ -54,14 +54,14 @@ const NewNavbar = () => {
                                 <Button variant='text' className='nav-btn'>
                                     <NavLink to='/our-services' className='nav-btn'>Our Services ⮟</NavLink>
                                     <Box className='nav-hover'>
-                                        <NavLink to='/puja'>Puja</NavLink>
-                                        <NavLink to='/prasad'>Prasad</NavLink>
-                                        <NavLink to='/east-mandir'>Hawan</NavLink>
-                                        <NavLink to='/south-mandir'>Darashan</NavLink>
-                                        <NavLink to='/south-mandir'>Astrology</NavLink>
-                                        <NavLink to='/south-mandir'>Brahman Bhoj</NavLink>
-                                        <NavLink to='/south-mandir'>Pandir Ji Request</NavLink>
-                                        <NavLink to='/south-mandir'>Special Travel Guide</NavLink>
+                                        <NavLink to='/service/puja'>Puja</NavLink>
+                                        <NavLink to='/service/prasad'>Prasad</NavLink>
+                                        <NavLink to='/service/hawan'>Hawan</NavLink>
+                                        <NavLink to='/service/darashan'>Darashan</NavLink>
+                                        <NavLink to='/service/astrology'>Astrology</NavLink>
+                                        <NavLink to='/service/brahman-bhoj'>Brahman Bhoj</NavLink>
+                                        <NavLink to='/service/pandit-ji-request'>Pandir Ji Request</NavLink>
+                                        <NavLink to='/service/special-travel-guide'>Special Travel Guide</NavLink>
                                     </Box>
                                 </Button>
                             </Box>
@@ -69,15 +69,15 @@ const NewNavbar = () => {
                                 <Button variant='text' className='nav-btn'>
                                     <NavLink to='/shops' className='nav-btn'>Shops ⮟</NavLink>
                                     <Box className='nav-hover'>
-                                        <NavLink to='/north-mandir'>Books</NavLink>
-                                        <NavLink to='/west-mandir'>Body Care</NavLink>
-                                        <NavLink to='/east-mandir'>Clothing</NavLink>
-                                        <NavLink to='/south-mandir'>Food for Fast</NavLink>
-                                        <NavLink to='/south-mandir'>Health & Immunity</NavLink>
-                                        <NavLink to='/south-mandir'>Puja Samagri</NavLink>
-                                        <NavLink to='/south-mandir'>Rudraksha</NavLink>
-                                        <NavLink to='/south-mandir'>Spiritual Accessories</NavLink>
-                                        <NavLink to='/south-mandir'>Yoga Store</NavLink>
+                                        <NavLink to='/shops/books'>Books</NavLink>
+                                        <NavLink to='/shops/body-care'>Body Care</NavLink>
+                                        <NavLink to='/shops/clothing'>Clothing</NavLink>
+                                        <NavLink to='/shops/food-for-fast'>Food for Fast</NavLink>
+                                        <NavLink to='/shops/health-immunity'>Health & Immunity</NavLink>
+                                        <NavLink to='/shops/puja-samagri'>Puja Samagri</NavLink>
+                                        <NavLink to='/shops/rudraksha'>Rudraksha</NavLink>
+                                        <NavLink to='/shops/spiritual-accessories'>Spiritual Accessories</NavLink>
+                                        <NavLink to='/shops/yoga-store'>Yoga Store</NavLink>
                                     </Box>
                                 </Button>
                             </Box>
@@ -85,9 +85,9 @@ const NewNavbar = () => {
                                 <Button variant='text' className='nav-btn'>
                                     Sanatan Library ⮟
                                     <Box className='nav-hover'>
-                                        <NavLink to='/north-mandir'>Ved Pujan Upnishd</NavLink>
-                                        <NavLink to='/west-mandir'>Audio</NavLink>
-                                        <NavLink to='/east-mandir'>Video</NavLink>
+                                        <NavLink to='/library/ved-puran-upanishad'>Ved Puran Upanishad</NavLink>
+                                        <NavLink to='/library/audio'>Audio</NavLink>
+                                        <NavLink to='/library/video'>Video</NavLink>
                                     </Box>
                                 </Button>
                             </Box>
@@ -95,28 +95,34 @@ const NewNavbar = () => {
                                 <Button variant='text' className='nav-btn'>
                                     Wellness Practice ⮟
                                     <Box className='nav-hover'>
-                                        <NavLink to='/north-mandir'>Yoga</NavLink>
-                                        <NavLink to='/west-mandir'>Meditation</NavLink>
+                                        <NavLink to='/wellness/yoga'>Yoga</NavLink>
+                                        <NavLink to='/wellness/meditation'>Meditation</NavLink>
                                     </Box>
                                 </Button>
                             </Box>
                             <Box position='relative' display='inline-block'>
-                                <Button variant='text' className='nav-btn'>
-                                    Blogs
-                                </Button>
+                                <NavLink to='/blogs'>
+                                    <Button variant='text' className='nav-btn'>
+                                        Blogs
+                                    </Button>
+                                </NavLink>
                             </Box><Box position='relative' display='inline-block'>
-                                <Button variant='text' className='nav-btn'>
-                                    Donate
-                                </Button>
+                                <NavLink to='/donate'>
+                                    <Button variant='text' className='nav-btn'>
+                                        Donate
+                                    </Button>
+                                </NavLink>
                             </Box>
                         </Box>
                     </Box>
                 </Grid>
                 <Grid item md={1}>
                     <Box display='flex' height='100%' justifyContent='start' alignItems='center'>
-                        <IconButton style={{ marginRight: '5%' }}>
-                            <Box sx={{ width: 30, height: 30 }} component="img" alt="Cart" src="/images/icons/cart.png" />
-                        </IconButton>
+                        <NavLink to='/cart'>
+                            <IconButton style={{ marginRight: '5%' }}>
+                                <Box sx={{ width: 30, height: 30 }} component="img" alt="Cart" src="/images/icons/cart.png" />
+                            </IconButton>
+                        </NavLink>
                         <IconButton variant='text' className='navbox-btn' id='user-btn' onClick={handleUserbox} aria-controls={openUserbox ? 'userbox-menu' : undefined} aria-haspopup='true' aria-expanded={openUserbox ? 'true' : undefined} >
                             <Avatar sx={{ width: 30, height: 30 }} src='/images/icons/profile.png' />
                         </IconButton  >

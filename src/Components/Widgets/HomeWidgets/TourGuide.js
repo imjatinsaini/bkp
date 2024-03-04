@@ -4,13 +4,13 @@ import React, { useState } from 'react'
 
 const TourGuide = () => {
 
-    const [isKedarnath, setIsKedarnath] = useState(false)
-    const [isVrindavan, setIsVrindavan] = useState(false)
-    const [isSomnath, setIsSomnath] = useState(false)
+    const [isKedarnath, setIsKedarnath] = useState('brightness(1)')
+    const [isVrindavan, setIsVrindavan] = useState('brightness(1)')
+    const [isSomnath, setIsSomnath] = useState('brightness(1)')
     const [isBtn, setIsBtn] = useState(false)
 
     return (
-        <Box style={{ backgroundImage: "url('/images/home/tour_background.png')", backgroundSize: 'cover' }}>
+        <Box sx={{ backgroundImage: "url('/images/home/tour_background.png')", backgroundSize: 'contain', backgroundPosition: 'center' }}>
             { /* For larger screens than sm */}
             <Box display={{ xs: 'none', sm: 'none', md: 'flex', lg: 'flex' }} justifyContent='center' marginLeft='30%' marginRight='30%' paddingTop='2%'>
                 <Paper variant='outlined' style={{ background: 'transparent', marginTop: '1.4%', marginRight: '1.5%', border: 'none' }}>
@@ -52,7 +52,7 @@ const TourGuide = () => {
                     <Box>
                         <Box>
                             <Paper variant='outlined' style={{ background: 'transparent', border: 'none' }}>
-                                <img src={isKedarnath ? '/images/home/tour_kedarnath_hover.png' : '/images/home/tour_kedarnath.png'} width='100%' onMouseOver={() => setIsKedarnath(true)} onMouseOut={() => setIsKedarnath(false)} />
+                                <img src='/images/home/tour_kedarnath.png' style={{filter: isKedarnath}} width='100%' onMouseOver={() => setIsKedarnath('brightness(0.25)')} onMouseOut={() => setIsKedarnath('brightness(1)')} />
                             </Paper>
                         </Box>
                         <Box display='flex' justifyContent='center' >
@@ -64,7 +64,7 @@ const TourGuide = () => {
                     <Box>
                         <Box>
                             <Paper variant='outlined' style={{ background: 'transparent', border: 'none' }}>
-                                <img src={isVrindavan ? '/images/home/tour_vrindavan_hover.png' : '/images/home/tour_vrindavan.png'} width='100%' onMouseOver={() => setIsVrindavan(true)} onMouseOut={() => setIsVrindavan(false)} />
+                                <img src='/images/home/tour_vrindavan.png' style={{filter: isVrindavan}} width='100%' onMouseOver={() => setIsVrindavan('brightness(0.25)')} onMouseOut={() => setIsVrindavan('brightness(1)')} />
                             </Paper>
                         </Box>
                         <Box display='flex' justifyContent='center' >
@@ -76,7 +76,7 @@ const TourGuide = () => {
                     <Box>
                         <Box>
                             <Paper variant='outlined' style={{ background: 'transparent', border: 'none' }}>
-                                <img src={isSomnath ? '/images/home/tour_somnath_hover.png' : '/images/home/tour_somnath.png'} width='100%' onMouseOver={() => setIsSomnath(true)} onMouseOut={() => setIsSomnath(false)} />
+                                <img src='/images/home/tour_somnath.png' style={{filter: isSomnath}} width='100%' onMouseOver={() => setIsSomnath('brightness(0.25)')} onMouseOut={() => setIsSomnath('brightness(1)')} />
                             </Paper>
                         </Box>
                         <Box display='flex' justifyContent='center' >

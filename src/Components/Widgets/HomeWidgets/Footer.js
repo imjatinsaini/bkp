@@ -1,6 +1,7 @@
 import { Box, Button, Grid, IconButton, Typography } from '@mui/material'
 import { Twitter, Instagram, Facebook } from '@mui/icons-material'
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 const Footer = () => {
     return (
@@ -26,33 +27,51 @@ const Footer = () => {
 
                         <Typography fontSize='20px' fontWeight='bold' color='white' marginLeft='4%'>Shop</Typography>
                         <Box display='flex' flexDirection='column' alignItems='start'>
-                            <IconButton>
-                                <Typography fontSize='16px' fontWeight='100' color='white'>Rudraksha</Typography>
-                            </IconButton>
-                            <IconButton>
-                                <Typography fontSize='16px' color='white' fontWeight='100'>Puja Samagri</Typography>
-                            </IconButton>
-                            <IconButton>
-                                <Typography fontSize='16px' color='white' fontWeight='100'>Yoga Store</Typography>
-                            </IconButton>
-                            <IconButton>
-                                <Typography fontSize='16px' color='white' fontWeight='100'>Health & Immunity</Typography>
-                            </IconButton>
-                            <IconButton>
-                                <Typography fontSize='16px' color='white' fontWeight='100'>Food for Fast</Typography>
-                            </IconButton>
-                            <IconButton>
-                                <Typography fontSize='16px' color='white' fontWeight='100'>Clothing</Typography>
-                            </IconButton>
-                            <IconButton>
-                                <Typography fontSize='16px' color='white' fontWeight='100'>Body Care</Typography>
-                            </IconButton>
-                            <IconButton>
-                                <Typography fontSize='16px' color='white' fontWeight='100'>Books</Typography>
-                            </IconButton>
-                            <IconButton>
-                                <Typography fontSize='16px' color='white' fontWeight='100'>Spiritual accessories</Typography>
-                            </IconButton>
+                            <NavLink to='/shops/rudraksha'>
+                                <IconButton>
+                                    <Typography fontSize='16px' fontWeight='100' color='white'>Rudraksha</Typography>
+                                </IconButton>
+                            </NavLink>
+                            <NavLink to='/shops/puja-samagri'>
+                                <IconButton>
+                                    <Typography fontSize='16px' color='white' fontWeight='100'>Puja Samagri</Typography>
+                                </IconButton>
+                            </NavLink>
+                            <NavLink to='/shops/yoga-store'>
+                                <IconButton>
+                                    <Typography fontSize='16px' color='white' fontWeight='100'>Yoga Store</Typography>
+                                </IconButton>
+                            </NavLink>
+                            <NavLink to='/shops/health-immunity'>
+                                <IconButton>
+                                    <Typography fontSize='16px' color='white' fontWeight='100'>Health & Immunity</Typography>
+                                </IconButton>
+                            </NavLink>
+                            <NavLink to='/shops/food-for-fast'>
+                                <IconButton>
+                                    <Typography fontSize='16px' color='white' fontWeight='100'>Food for Fast</Typography>
+                                </IconButton>
+                            </NavLink>
+                            <NavLink to='/shops/clothing'>
+                                <IconButton>
+                                    <Typography fontSize='16px' color='white' fontWeight='100'>Clothing</Typography>
+                                </IconButton>
+                            </NavLink>
+                            <NavLink to='/shops/body-care'>
+                                <IconButton>
+                                    <Typography fontSize='16px' color='white' fontWeight='100'>Body Care</Typography>
+                                </IconButton>
+                            </NavLink>
+                            <NavLink to='/shops/books'>
+                                <IconButton>
+                                    <Typography fontSize='16px' color='white' fontWeight='100'>Books</Typography>
+                                </IconButton>
+                            </NavLink>
+                            <NavLink to='/shops/spiritual-accessories'>
+                                <IconButton>
+                                    <Typography fontSize='16px' color='white' fontWeight='100'>Spiritual accessories</Typography>
+                                </IconButton>
+                            </NavLink>
                         </Box>
                     </Box>
                 </Grid>
@@ -60,21 +79,31 @@ const Footer = () => {
                     <Box paddingLeft='5%'>
                         <Typography fontSize='20px' fontWeight='bold' color='white' marginLeft='4%'>Services</Typography>
                         <Box display='flex' flexDirection='column' alignItems='start'>
-                            <IconButton>
-                                <Typography fontSize='16px' color='white' fontWeight='100'>Puja</Typography>
-                            </IconButton>
-                            <IconButton>
-                                <Typography fontSize='16px' color='white' fontWeight='100'>Prasad</Typography>
-                            </IconButton>
-                            <IconButton>
-                                <Typography fontSize='16px' color='white' fontWeight='100'>Hawan</Typography>
-                            </IconButton>
-                            <IconButton>
-                                <Typography fontSize='16px' color='white' fontWeight='100'>Darshan</Typography>
-                            </IconButton>
-                            <IconButton>
-                                <Typography fontSize='16px' color='white' fontWeight='100'>Astrology</Typography>
-                            </IconButton>
+                            <NavLink to='/service/puja'>
+                                <IconButton>
+                                    <Typography fontSize='16px' color='white' fontWeight='100'>Puja</Typography>
+                                </IconButton>
+                            </NavLink>
+                            <NavLink to='/service/prasad'>
+                                <IconButton>
+                                    <Typography fontSize='16px' color='white' fontWeight='100'>Prasad</Typography>
+                                </IconButton>
+                            </NavLink>
+                            <NavLink to='/service/hawan'>
+                                <IconButton>
+                                    <Typography fontSize='16px' color='white' fontWeight='100'>Hawan</Typography>
+                                </IconButton>
+                            </NavLink>
+                            <NavLink to='/service/darshan'>
+                                <IconButton>
+                                    <Typography fontSize='16px' color='white' fontWeight='100'>Darshan</Typography>
+                                </IconButton>
+                            </NavLink>
+                            <NavLink to='/service/astrology'>
+                                <IconButton>
+                                    <Typography fontSize='16px' color='white' fontWeight='100'>Astrology</Typography>
+                                </IconButton>
+                            </NavLink>
                         </Box>
                     </Box>
                 </Grid>
@@ -82,21 +111,31 @@ const Footer = () => {
                     <Box paddingLeft='5%'>
                         <Typography fontSize='20px' fontWeight='bold' color='white' marginLeft='4%'>Quick Links</Typography>
                         <Box display='flex' flexDirection='column' alignItems='start'>
-                            <IconButton>
-                                <Typography fontSize='16px' color='white' fontWeight='100'>About Us</Typography>
-                            </IconButton>
-                            <IconButton>
-                                <Typography fontSize='16px' color='white' fontWeight='100'>Return & Refund</Typography>
-                            </IconButton>
-                            <IconButton>
-                                <Typography fontSize='16px' color='white' fontWeight='100'>Shipping Policy</Typography>
-                            </IconButton>
-                            <IconButton>
-                                <Typography fontSize='16px' color='white' fontWeight='100'>Terms and Condition</Typography>
-                            </IconButton>
-                            <IconButton>
-                                <Typography fontSize='16px' color='white' fontWeight='100'>Privacy & Policy</Typography>
-                            </IconButton>
+                            <NavLink to='/about-us'>
+                                <IconButton>
+                                    <Typography fontSize='16px' color='white' fontWeight='100'>About Us</Typography>
+                                </IconButton>
+                            </NavLink>
+                            <NavLink to='/return-refund'>
+                                <IconButton>
+                                    <Typography fontSize='16px' color='white' fontWeight='100'>Return & Refund</Typography>
+                                </IconButton>
+                            </NavLink>
+                            <NavLink to='/shipping-policy'>
+                                <IconButton>
+                                    <Typography fontSize='16px' color='white' fontWeight='100'>Shipping Policy</Typography>
+                                </IconButton>
+                            </NavLink>
+                            <NavLink to='/terms-condition'>
+                                <IconButton>
+                                    <Typography fontSize='16px' color='white' fontWeight='100'>Terms and Condition</Typography>
+                                </IconButton>
+                            </NavLink>
+                            <NavLink to='/privacy-policy'>
+                                <IconButton>
+                                    <Typography fontSize='16px' color='white' fontWeight='100'>Privacy & Policy</Typography>
+                                </IconButton>
+                            </NavLink>
                         </Box>
                     </Box>
                 </Grid>
@@ -104,25 +143,33 @@ const Footer = () => {
                     <Box paddingLeft='5%'>
                         <Typography fontSize='20px' fontWeight='bold' color='white' marginLeft='4%'>Lifestyle</Typography>
                         <Box display='flex' flexDirection='column' alignItems='start'>
-                            <IconButton>
-                                <Typography fontSize='16px' color='white' fontWeight='100'>Yoga</Typography>
-                            </IconButton>
-                            <IconButton>
-                                <Typography fontSize='16px' color='white' fontWeight='100'>Meditation</Typography>
-                            </IconButton>
+                            <NavLink to='/wellness/yoga'>
+                                <IconButton>
+                                    <Typography fontSize='16px' color='white' fontWeight='100'>Yoga</Typography>
+                                </IconButton>
+                            </NavLink>
+                            <NavLink to='/wellness/meditation'>
+                                <IconButton>
+                                    <Typography fontSize='16px' color='white' fontWeight='100'>Meditation</Typography>
+                                </IconButton>
+                            </NavLink>
                         </Box>
                     </Box>
                 </Grid>
                 <Grid item md={1.6}>
                     <Box paddingLeft='5%'>
-                        <Typography fontSize='20px' fontWeight='bold' color='white' marginLeft='4%'>Quick Links</Typography>
+                        <Typography fontSize='20px' fontWeight='bold' color='white' marginLeft='4%'>Help</Typography>
                         <Box display='flex' flexDirection='column' alignItems='start'>
-                            <IconButton>
-                                <Typography fontSize='16px' color='white' fontWeight='100'>Contact Us</Typography>
-                            </IconButton>
-                            <IconButton>
-                                <Typography fontSize='16px' color='white' fontWeight='100'>Track Order</Typography>
-                            </IconButton>
+                            <NavLink to='contact-us'>
+                                <IconButton>
+                                    <Typography fontSize='16px' color='white' fontWeight='100'>Contact Us</Typography>
+                                </IconButton>
+                            </NavLink>
+                            <NavLink to='/track-order'>
+                                <IconButton>
+                                    <Typography fontSize='16px' color='white' fontWeight='100'>Track Order</Typography>
+                                </IconButton>
+                            </NavLink>
                         </Box>
                     </Box>
                 </Grid>

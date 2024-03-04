@@ -4,9 +4,9 @@ import React, { useState } from 'react'
 
 const NewsFeed = () => {
 
-    const [isPongal, setIsPongal] = useState(false)
-    const [isHoli, setIsHoli] = useState(false)
-    const [isDiwali, setIsDiwali] = useState(false)
+    const [isPongal, setIsPongal] = useState('brightness(1)')
+    const [isHoli, setIsHoli] = useState('brightness(1)')
+    const [isDiwali, setIsDiwali] = useState('brightness(1)')
     const [isBtn, setIsBtn] = useState(false)
 
     return (
@@ -51,7 +51,7 @@ const NewsFeed = () => {
                 <Grid item md={3} display={{ xs: 'none', sm: 'none', md: 'block', lg: 'block' }} marginRight='5%' marginLeft='4%' >
                     <Box>
                         <Paper variant='outlined' style={{ background: 'transparent', display: 'flex', flexDirection: 'column', borderRadius: '20px' }}>
-                            <img src={isPongal ? '/images/home/news_pongal_hover.png' : '/images/home/news_pongal.png'} alt='ponga news' width='100%' onMouseOver={() => setIsPongal(true)} onMouseOut={() => setIsPongal(false)} />
+                            <img src='/images/home/news_pongal.png' style={{filter: isPongal}} alt='ponga news' width='100%' onMouseOver={() => setIsPongal('brightness(0.5)')} onMouseOut={() => setIsPongal('brightness(1)')} />
                             <Box paddingLeft='4.5%' paddingRight='4.5%' bgcolor='white' paddingBottom='5%' borderRadius='0px 0px 15px 15px'>
                                 <Typography style={{ fontSize: '24px', fontWeight: '500', marginTop: '3%' }}>What to do on Pongal?</Typography>
                                 <Typography style={{ fontSize: '14px', fontWeight: '500', opacity: '70%' }}>Pongal is a popular harvest festival celebrated in the southern Indian state of Tamil Nadu. It is a time for expressing gratitude to the sun god for a bountiful harvest. Here are some traditional activities.....................read more.</Typography>
@@ -76,7 +76,7 @@ const NewsFeed = () => {
                 <Grid item md={3} display={{ xs: 'none', sm: 'none', md: 'block', lg: 'block' }} marginRight='5%' marginLeft='4%' >
                     <Box>
                         <Paper variant='outlined' style={{ background: 'transparent', display: 'flex', flexDirection: 'column', borderRadius: '20px' }}>
-                            <img src={isHoli ? '/images/home/news_holi_hover.png' : '/images/home/news_holi.png'} alt='holi news' width='100%' onMouseOver={() => setIsHoli(true)} onMouseOut={() => setIsHoli(false)} />
+                            <img src='/images/home/news_holi.png' style={{filter: isHoli}} alt='holi news' width='100%' onMouseOver={() => setIsHoli('brightness(0.5)')} onMouseOut={() => setIsHoli('brightness(1)')} />
                             <Box paddingLeft='4.5%' paddingRight='4.5%' bgcolor='white' paddingBottom='5%' borderRadius='0px 0px 15px 15px'>
                                 <Typography style={{ fontSize: '24px', fontWeight: '500', marginTop: '3%' }}>What to do on Holi?</Typography>
                                 <Typography style={{ fontSize: '14px', fontWeight: '500', opacity: '70%' }}>On the day of Holi, families and friends gather in their backyards, terraces, neighborhoods, or driveways (like us) to play Holi with brightly colored powders to throw and smear on clothes ....read more.</Typography>
@@ -101,7 +101,7 @@ const NewsFeed = () => {
                 <Grid item md={3} display={{ xs: 'none', sm: 'none', md: 'block', lg: 'block' }} marginRight='0%' marginLeft='4%' >
                     <Box>
                         <Paper variant='outlined' style={{ background: 'transparent', display: 'flex', flexDirection: 'column', borderRadius: '20px' }}>
-                            <img src={isDiwali ? '/images/home/news_diwali_hover.png' : '/images/home/news_diwali.png'} alt='diwali news' width='100%' onMouseOver={() => setIsDiwali(true)} onMouseOut={() => setIsDiwali(false)} />
+                            <img src='/images/home/news_diwali.png' style={{filter: isDiwali}} alt='diwali news' width='100%' onMouseOver={() => setIsDiwali('brightness(0.5)')} onMouseOut={() => setIsDiwali('brightness(1)')} />
                             <Box paddingLeft='4.5%' paddingRight='4.5%' bgcolor='white' paddingBottom='5%' borderRadius='0px 0px 15px 15px'>
                                 <Typography style={{ fontSize: '24px', fontWeight: '500', marginTop: '3%' }}>What to do on Diwali?</Typography>
                                 <Typography style={{ fontSize: '14px', fontWeight: '500', opacity: '70%' }}>During Diwali, also known as the Festival of Lights, there are several cherished traditions to partake in. Homes are meticulously cleaned and adorned with colorful rangoli patterns, twinkling diyas, and vibrant......read more.</Typography>

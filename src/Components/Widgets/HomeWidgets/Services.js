@@ -4,9 +4,9 @@ import { ArrowForward } from '@mui/icons-material'
 
 const Services = () => {
 
-    const [isPuja, setIsPuja] = useState(false);
-    const [isPrasad, setIsPrasad] = useState(false);
-    const [isAstrology, setIsAstrology] = useState(false);
+    const [isPuja, setIsPuja] = useState('brightness(1)');
+    const [isPrasad, setIsPrasad] = useState('brightness(1)');
+    const [isAstrology, setIsAstrology] = useState('brightness(1)');
     const [isBtn, setIsBtn] = useState(false)
 
     return (
@@ -74,7 +74,7 @@ const Services = () => {
                     <Box>
                         <Box>
                             <Paper variant='outlined' style={{ background: 'transparent', border: 'none' }}>
-                                <img src= {isPuja ? '/images/home/services_puja_hover.png': '/images/home/services_puja.png' } width='100%' onMouseOver={()=>setIsPuja(true)} onMouseOut={()=>setIsPuja(false)} />
+                                <img src='/images/home/services_puja.png' style={{filter: isPuja}} width='100%' onMouseOver={()=>setIsPuja('brightness(0.4)')} onMouseOut={()=>setIsPuja('brightness(1)')} />
                             </Paper>
                         </Box>
                         <Box display='flex' justifyContent='center' >
@@ -87,7 +87,7 @@ const Services = () => {
                     <Box>
                         <Box>
                             <Paper variant='outlined' style={{ background: 'transparent', border: 'none' }}>
-                            <img src= {isPrasad ? '/images/home/services_prasad_hover.png': '/images/home/services_prasad.png' } width='100%' onMouseOver={()=>setIsPrasad(true)} onMouseOut={()=>setIsPrasad(false)} />
+                            <img src='/images/home/services_prasad.png' style={{filter: isPrasad}} width='100%' onMouseOver={()=>setIsPrasad('brightness(0.4)')} onMouseOut={()=>setIsPrasad('brightness(1)')} />
                             </Paper>
                         </Box>
                         <Box display='flex' justifyContent='center' >
@@ -100,7 +100,7 @@ const Services = () => {
                     <Box>
                         <Box>
                             <Paper variant='outlined' style={{ background: 'transparent', border: 'none' }}>
-                            <img src= {isAstrology ? '/images/home/services_astrology_hover.png': '/images/home/services_astrology.png' } width='100%' onMouseOver={()=>setIsAstrology(true)} onMouseOut={()=>setIsAstrology(false)} />
+                            <img src='/images/home/services_astrology.png' style={{filter: isAstrology}} width='100%' onMouseOver={()=>setIsAstrology('brightness(0.4)')} onMouseOut={()=>setIsAstrology('brightness(1)')} />
                             </Paper>
                         </Box>
                         <Box display='flex' justifyContent='center' >

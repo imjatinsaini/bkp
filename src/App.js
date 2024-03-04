@@ -10,6 +10,8 @@ import WestMandir from './Components/Pages/Mandir/WestMandir';
 import BankeBihari from './Components/Pages/Mandir/North Mandir/BankeBihari';
 import OurService from './Components/Pages/Services/OurService';
 import Shops from './Components/Pages/Shop/Shops';
+import Rudraksha from './Components/Pages/Shop/ShopPages/Rudraksha';
+import PageNotFound from './Components/Pages/PageNotFound';
 
 function App() {
   return (
@@ -35,6 +37,11 @@ function App() {
 
         {/* Shops routes */}
         <Route path='/shops' element={<Shops />} />
+        
+        <Route path='/shops/rudraksha' element={<Rudraksha />} />
+
+        {/* Path not found */}
+        <Route path='/*'  element={<PageNotFound />} />
 
       </Routes>
     </>

@@ -17,36 +17,21 @@ const MandirImage = ({ mandir_type, mandir_image }) => {
             {/* For lg and xl */}
             <Box display={{ xs: 'none', sm: 'none', md: 'none', lg: 'block', xl: 'block' }} sx={{ height: '90vh' }}>
                 <Paper sx={{ backgroundSize: 'cover', backgroundImage: mandir_image, backgroundPosition: 'center', height: '100%', width: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
-                    <Typography fontWeight='bold' fontSize='96px' style={{
-                        background: '-webkit-linear-gradient(90deg, #1aa11f, #ffffff, #ff0707)',
-                        WebkitBackgroundClip: 'text',
-                        color: 'transparent',
-                        display: 'inline-block',
-                    }}>{mandir_type}</Typography>
+                    <Typography fontWeight='bold' fontSize='96px' color='white'>{mandir_type}</Typography>
                     <Box sx={{ width: '28%', border: 'none', borderTop: '5px solid #f8f7f4', marginBottom: '2%' }} mx='auto' />
                 </Paper>
             </Box>
             {/* For md*/}
             <Box display={{ xs: 'none', sm: 'none', md: 'block', lg: 'none', xl: 'none' }} sx={{ height: '35vh' }}>
                 <Paper sx={{ backgroundSize: 'cover', backgroundImage: mandir_image, height: '100%', width: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
-                    <Typography fontWeight='bold' fontSize='76px' style={{
-                        background: '-webkit-linear-gradient(90deg, #1aa11f, #ffffff, #ff0707)',
-                        WebkitBackgroundClip: 'text',
-                        color: 'transparent',
-                        display: 'inline-block',
-                    }}>{mandir_type}</Typography>
+                    <Typography fontWeight='bold' fontSize='76px' color='white'>{mandir_type}</Typography>
                     <Box sx={{ width: '28%', border: 'none', borderTop: '5px solid #f8f7f4', marginBottom: '2%' }} mx='auto' />
                 </Paper>
             </Box>
             {/* For xs and sm */}
             <Box display={{ xs: 'block', sm: 'block', md: 'none', lg: 'none', xl: 'none' }} sx={{ height: '20vh' }}>
                 <Paper sx={{ backgroundSize: 'cover', backgroundImage: mandir_image, height: '100%', width: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
-                    <Typography fontWeight='bold' fontSize='32px' style={{
-                        background: '-webkit-linear-gradient(90deg, #1aa11f, #ffffff, #ff0707)',
-                        WebkitBackgroundClip: 'text',
-                        color: 'transparent',
-                        display: 'inline-block',
-                    }}>{mandir_type}</Typography>
+                    <Typography fontWeight='bold' fontSize='32px' color='white'>{mandir_type}</Typography>
                     <Box sx={{ width: '35%', border: 'none', borderTop: '3px solid #f8f7f4', marginBottom: '2%' }} mx='auto' />
                 </Paper>
             </Box>
