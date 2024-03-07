@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import HomePage from './Components/Pages/HomePage';
-import Login from './Components/Pages/Login';
-import Register from './Components/Pages/Register';
+import Login from './Components/Pages/Auth/Login';
+import Register from './Components/Pages/Auth/Register';
 import './App.css'
 import NorthMandir from './Components/Pages/Mandir/NorthMandir';
 import SouthMandir from './Components/Pages/Mandir/SouthMandir';
@@ -12,6 +12,7 @@ import OurService from './Components/Pages/Services/OurService';
 import Shops from './Components/Pages/Shop/Shops';
 import Rudraksha from './Components/Pages/Shop/ShopPages/Rudraksha';
 import PageNotFound from './Components/Pages/PageNotFound';
+import OtpVerification from './Components/Pages/Auth/OtpVerification';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         {/* Auth routes */}
         <Route path='/login' element={<Login />} />
         <Route path='/create-account' element={<Register />} />
+        <Route path='/otp-verification' element={<OtpVerification />} />
 
         {/* Mandir routes */}
         <Route path='/north-mandir' element={<NorthMandir />} />
