@@ -2,7 +2,7 @@ import { Avatar, Box, Button, Drawer, Grid, IconButton, Menu, Typography } from 
 import React, { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import './../../Styles/NewNavbar.css'
-import { MenuOutlined } from '@mui/icons-material'
+import { MenuOutlined, Close, KeyboardArrowDown } from '@mui/icons-material'
 
 const NewNavbar = () => {
 
@@ -156,13 +156,46 @@ const NewNavbar = () => {
                     <IconButton onClick={() => setSidebar(true)}>
                         <MenuOutlined />
                     </IconButton>
-                    <Drawer anchor='left' open={sidebar} onClose={() => setSidebar(false)}>
-                        <Box width='250px' textAlign='center' role='presentation' display='grid'>
-                            <Typography variant='h6' component='div'>SidePanel</Typography>
-                            <Button variant='text' className='navbox-btn'>Home</Button>
-                            <Button variant='text' className='navbox-btn'>Mandir</Button>
+                    <Drawer anchor='left' open={sidebar} onClose={() => setSidebar(false)} style={{ width: '100%' }}>
+                        <Box width='100vw' role='presentation' display='grid' border='1px solid red' >
+                            <Box display='flex' justifyContent='space-between'>
+                                <Box>
+                                    <Button>Login/ Signup</Button>
+                                </Box>
+                                <Box>
+                                    <IconButton onClick={() => setSidebar(false)}>
+                                        <Close />
+                                    </IconButton>
+                                </Box>
+                            </Box>
+                            <Box position='relative' display='inline-block'>
+                                <NavLink to='/'>
+                                    <Button variant='text'>
+                                        Home
+                                    </Button>
+                                </NavLink>
+                            </Box>
+                            <Box display='flex'>
+                                <Box position='relative' display='inline-block'>
+                                    <Button className='nav-btn'>
+                                        <NavLink to='/north-mandir' className='nav-btn'>Mandir</NavLink>
+                                    </Button>
+                                </Box>
+                                <Box position='relative' display='inline-block'>
+                                    <Button variant='text' >
+                                        <KeyboardArrowDown />
+                                        <Box className='nav-hover'>
+                                            <NavLink to='/north-mandir'>North India</NavLink>
+                                            <NavLink to='/west-mandir'>West India</NavLink>
+                                            <NavLink to='/east-mandir'>East India</NavLink>
+                                            <NavLink to='/south-mandir'>South India</NavLink>
+                                        </Box>
+                                    </Button>
+                                </Box>
+                            </Box>
                             <Button variant='text' className='navbox-btn'>Our Services</Button>
-                            <Button variant='text' className='navbox-btn'>Special Travel Guide</Button>
+                            <Button variant='text' className='navbox-btn'>Shops</Button>
+                            <Button variant='text' className='navbox-btn'>Sanatan Library</Button>
                             <Button variant='text' className='navbox-btn'>Wellness Practice</Button>
                             <Button variant='text' className='navbox-btn'>Blogs</Button>
                             <Button variant='text' className='navbox-btn'>Donate</Button>
