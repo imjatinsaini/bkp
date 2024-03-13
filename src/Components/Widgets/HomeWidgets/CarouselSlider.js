@@ -297,7 +297,7 @@ function Item({ item }) {
                     <Grid item xs={12} >
                         <Box position='relative'>
                             <img src='/images/home/carousel_2.png' width='100%' />
-                            <Box position='absolute' top='25%' left='10%' display={{ xs: 'none', sm: 'none', md: 'block', lg: 'block', xl: 'block' }}>
+                            <Box position='absolute' top='25%' left='5%' display={{ xs: 'none', sm: 'none', md: 'block', lg: 'block', xl: 'block' }}>
                                 <Box>
                                     <Typography style={{ fontSize: '40px', fontWeight: '500' }}>Natural Rudraksha</Typography>
                                 </Box>
@@ -308,7 +308,7 @@ function Item({ item }) {
                                     <Typography style={{ fontSize: '16px' }}>|| Rudraksha for peace, Progress, Prosperity, Success, Health & Well Being ||</Typography>
                                 </Box>
                                 <Box marginTop='5%'>
-                                    <Button style={{ borderRadius: '35px', backgroundColor: '#d7d7d9', color: 'black', }}>Shop Now</Button>
+                                    <Button style={{ borderRadius: '35px', backgroundColor: '#d7d7d9', color: 'black', fontWeight: 'bold', paddingLeft: '5%', paddingRight: '5%' }}>Shop Now</Button>
                                 </Box>
                             </Box>
                             <Box position='absolute' top='25%' left='5%' display={{ xs: 'block', sm: 'block', md: 'none', lg: 'none', xl: 'none' }}>
@@ -322,7 +322,7 @@ function Item({ item }) {
                                     <Typography style={{ fontSize: '8px' }}>|| Rudraksha for peace, Progress, Prosperity, Success, Health & Well Being ||</Typography>
                                 </Box>
                                 <Box marginTop='5%'>
-                                    <Button style={{ borderRadius: '35px', backgroundColor: '#d7d7d9', color: 'black', }}>Shop Now</Button>
+                                    <Button style={{ borderRadius: '35px', backgroundColor: '#d7d7d9', color: 'black', fontWeight: 'bold', paddingLeft: '1%', paddingRight: '1%' }}>Shop Now</Button>
                                 </Box>
                             </Box>
                         </Box>
@@ -334,19 +334,19 @@ function Item({ item }) {
                     <Grid item xs={12} >
                         <Box position='relative'>
                             <img src='/images/home/carousel_3.png' width='100%' />
-                            <Box position='absolute' marginRight='50%' top='25%' left='10%' display={{ xs: 'none', sm: 'none', md: 'none', lg: 'block', xl: 'block' }}>
-                                <Box bgcolor='#c6846e' borderRadius='5px'>
+                            <Box position='absolute' marginRight='50%' top='30%' left='5%' display={{ xs: 'none', sm: 'none', md: 'none', lg: 'block', xl: 'block' }}>
+                                <Box bgcolor='#c6846e' borderRadius='5px' width='80%' paddingTop='2%' paddingBottom='2%'>
                                     <Typography style={{ fontSize: '28px', fontWeight: 'bold', color: 'white', textAlign: 'center' }}>
                                         घर बैठे पाये केदारनाथ धाम का प्रसाद
                                     </Typography>
                                 </Box>
-                                <Box marginLeft='5%' marginTop='3%'>
+                                <Box marginTop='3%' width='80%'>
                                     <Typography style={{ fontSize: '18px', color: 'black', textAlign: 'center', fontWeight: '500' }}>
                                         GET THE PRASAD OF KEDARNATH TEMPLE IN UTTARAKHAND FROM BHAGWAN KA PRASAD AT HOME
                                     </Typography>
                                 </Box>
                                 <Box marginTop='10%'>
-                                    <Button style={{ borderRadius: '35px', backgroundColor: '#d7d7d9', color: 'black', }}>
+                                    <Button style={{ borderRadius: '35px', backgroundColor: 'white', color: '#f24e1e', fontWeight: 'bold', paddingLeft: '5%', paddingRight: '5%' }}>
                                         अभी ऑर्डर करे
                                     </Button>
                                 </Box>
@@ -380,7 +380,7 @@ function Item({ item }) {
                                     </Typography>
                                 </Box>
                                 <Box marginTop='10%'>
-                                    <Button style={{ borderRadius: '35px', backgroundColor: '#d7d7d9', color: 'black', }}>
+                                    <Button style={{ borderRadius: '35px', backgroundColor: 'white', color: '#f24e1e', fontWeight: 'bold', paddingLeft: '5%', paddingRight: '5%' }}>
                                         अभी ऑर्डर करे
                                     </Button>
                                 </Box>
