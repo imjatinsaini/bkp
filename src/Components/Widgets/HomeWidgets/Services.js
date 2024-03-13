@@ -1,6 +1,7 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import { Box, Button, Container, Grid, Paper, Typography } from '@mui/material'
 import { ArrowForward } from '@mui/icons-material'
+import { NavLink } from 'react-router-dom';
 
 const Services = () => {
 
@@ -39,20 +40,20 @@ const Services = () => {
 
             { /* For larger screens than md */}
             <Box display={{ xs: 'none', sm: 'none', md: 'flex', lg: 'flex' }} justifyContent='center' marginLeft='32%' marginRight='32%'>
-                <Typography color='black' fontSize='35px' marginTop='2.5%' textAlign='center'>Explore our services we are offering</Typography>
+                <Typography color='black' fontSize='35px' marginTop='2.5%' textAlign='center'>Explore the services we are offering</Typography>
             </Box>
             { /* For sm and smaller screens */}
             <Box display={{ xs: 'flex', sm: 'flex', md: 'none', lg: 'none' }} justifyContent='center' marginLeft='30%' marginRight='30%'>
-                <Typography color='black' fontSize='15px' marginTop='2.5%' fontWeight='500' textAlign='center'>Explore our services we are offering</Typography>
+                <Typography color='black' fontSize='15px' marginTop='2.5%' fontWeight='500' textAlign='center'>Explore the services we are offering</Typography>
             </Box>
 
             { /* For larger screens than md */}
-            <Box display={{ xs: 'none', sm: 'none', md: 'flex', lg: 'flex' }} justifyContent='center' marginLeft='30%' marginRight='30%'>
-                <Typography color='black' fontSize='16px' marginTop='2.5%' textAlign='center' fontWeight='500'>“Temple is place where hindu worship consectetur adipisicing elit, sed do”</Typography>
+            <Box display={{ xs: 'none', sm: 'none', md: 'flex', lg: 'flex' }} justifyContent='center' marginLeft='20%' marginRight='20%'>
+                <Typography color='black' fontSize='16px' marginTop='2.5%' textAlign='center' fontWeight='500'>"Discover the range of services we provide and unlock new possibilities today!"</Typography>
             </Box>
             { /* For sm and smaller screens */}
             <Box display={{ xs: 'flex', sm: 'flex', md: 'none', lg: 'none' }} justifyContent='center' marginLeft='20%' marginRight='20%'>
-                <Typography color='black' fontSize='12px' marginTop='2.5%' textAlign='center' fontWeight='350'>“Temple is place where hindu worship consectetur adipisicing elit, sed do”</Typography>
+                <Typography color='black' fontSize='12px' marginTop='2.5%' textAlign='center' fontWeight='350'>"Discover the range of services we provide and unlock new possibilities today!"</Typography>
             </Box>
 
             { /* For larger screens than md */}
@@ -73,9 +74,11 @@ const Services = () => {
                 <Grid item md={3} display={{ xs: 'none', sm: 'none', md: 'block', lg: 'block' }} marginRight='4%' marginLeft='4%' >
                     <Box>
                         <Box>
-                            <Paper variant='outlined' style={{ background: 'transparent', border: 'none' }}>
-                                <img src='/images/home/services_puja.png' style={{filter: isPuja}} width='100%' onMouseOver={()=>setIsPuja('brightness(0.4)')} onMouseOut={()=>setIsPuja('brightness(1)')} />
-                            </Paper>
+                            <NavLink to='/service/puja'>
+                                <Paper variant='outlined' style={{ background: 'transparent', border: 'none' }}>
+                                    <img src='/images/home/services_puja.png' style={{ filter: isPuja }} width='100%' onMouseOver={() => setIsPuja('brightness(0.4)')} onMouseOut={() => setIsPuja('brightness(1)')} />
+                                </Paper>
+                            </NavLink>
                         </Box>
                         <Box display='flex' justifyContent='center' >
                             <Typography color='black' fontSize='40px' marginTop='2.5%' textAlign='center'>Puja</Typography>
@@ -86,9 +89,11 @@ const Services = () => {
                 <Grid item md={3} display={{ xs: 'none', sm: 'none', md: 'block', lg: 'block' }} marginRight='4%' marginLeft='4%' marginTop='5%' >
                     <Box>
                         <Box>
-                            <Paper variant='outlined' style={{ background: 'transparent', border: 'none' }}>
-                            <img src='/images/home/services_prasad.png' style={{filter: isPrasad}} width='100%' onMouseOver={()=>setIsPrasad('brightness(0.4)')} onMouseOut={()=>setIsPrasad('brightness(1)')} />
-                            </Paper>
+                            <NavLink to='/service/prasad'>
+                                <Paper variant='outlined' style={{ background: 'transparent', border: 'none' }}>
+                                    <img src='/images/home/services_prasad.png' style={{ filter: isPrasad }} width='100%' onMouseOver={() => setIsPrasad('brightness(0.4)')} onMouseOut={() => setIsPrasad('brightness(1)')} />
+                                </Paper>
+                            </NavLink>
                         </Box>
                         <Box display='flex' justifyContent='center' >
                             <Typography color='black' fontSize='40px' marginTop='2.5%' textAlign='center'>Prasad</Typography>
@@ -99,9 +104,11 @@ const Services = () => {
                 <Grid item md={3} display={{ xs: 'none', sm: 'none', md: 'block', lg: 'block' }} marginRight='4%' marginLeft='4%' >
                     <Box>
                         <Box>
-                            <Paper variant='outlined' style={{ background: 'transparent', border: 'none' }}>
-                            <img src='/images/home/services_astrology.png' style={{filter: isAstrology}} width='100%' onMouseOver={()=>setIsAstrology('brightness(0.4)')} onMouseOut={()=>setIsAstrology('brightness(1)')} />
-                            </Paper>
+                            <NavLink to='/service/astrology'>
+                                <Paper variant='outlined' style={{ background: 'transparent', border: 'none' }}>
+                                    <img src='/images/home/services_astrology.png' style={{ filter: isAstrology }} width='100%' onMouseOver={() => setIsAstrology('brightness(0.4)')} onMouseOut={() => setIsAstrology('brightness(1)')} />
+                                </Paper>
+                            </NavLink>
                         </Box>
                         <Box display='flex' justifyContent='center' >
                             <Typography color='black' fontSize='40px' marginTop='2.5%' textAlign='center'>Astrology</Typography>
@@ -114,9 +121,11 @@ const Services = () => {
                 <Grid item md={3} display={{ xs: 'block', sm: 'block', md: 'none', lg: 'none' }} marginRight='5%' marginLeft='5%' marginBottom='8%' marginTop='5%' >
                     <Box>
                         <Box>
-                            <Paper variant='outlined' style={{ background: 'transparent', border: 'none' }}>
-                                <img src='/images/home/services_puja.png' width='100%' />
-                            </Paper>
+                            <NavLink to='/service/puja'>
+                                <Paper variant='outlined' style={{ background: 'transparent', border: 'none' }}>
+                                    <img src='/images/home/services_puja.png' width='100%' />
+                                </Paper>
+                            </NavLink>
                         </Box>
                         <Box display='flex' justifyContent='center' >
                             <Typography color='black' fontSize='25px' marginTop='2.5%' textAlign='center'>Puja</Typography>
@@ -127,9 +136,11 @@ const Services = () => {
                 <Grid item md={3} display={{ xs: 'block', sm: 'block', md: 'none', lg: 'none' }} marginRight='5%' marginLeft='5%' marginBottom='8%' >
                     <Box>
                         <Box>
-                            <Paper variant='outlined' style={{ background: 'transparent', border: 'none' }}>
-                                <img src='/images/home/services_prasad.png' width='100%' />
-                            </Paper>
+                            <NavLink to='/service/puja'>
+                                <Paper variant='outlined' style={{ background: 'transparent', border: 'none' }}>
+                                    <img src='/images/home/services_prasad.png' width='100%' />
+                                </Paper>
+                            </NavLink>
                         </Box>
                         <Box display='flex' justifyContent='center' >
                             <Typography color='black' fontSize='25px' marginTop='2.5%' textAlign='center'>Prasad</Typography>
@@ -140,9 +151,11 @@ const Services = () => {
                 <Grid item md={3} display={{ xs: 'block', sm: 'block', md: 'none', lg: 'none' }} marginRight='5%' marginLeft='5%' marginBottom='8%' >
                     <Box>
                         <Box>
-                            <Paper variant='outlined' style={{ background: 'transparent', border: 'none' }}>
-                                <img src='/images/home/services_astrology.png' width='100%' />
-                            </Paper>
+                            <NavLink to='/service/puja'>
+                                <Paper variant='outlined' style={{ background: 'transparent', border: 'none' }}>
+                                    <img src='/images/home/services_astrology.png' width='100%' />
+                                </Paper>
+                            </NavLink>
                         </Box>
                         <Box display='flex' justifyContent='center' >
                             <Typography color='black' fontSize='25px' marginTop='2.5%' textAlign='center'>Astrology</Typography>
@@ -154,12 +167,16 @@ const Services = () => {
             </Grid>
 
             { /* For larger screens than md */}
-            <Box display={{xs: 'none', sm: 'none', md: 'flex', lg: 'flex', xl: 'flex'}} justifyContent='center' marginTop='3%' paddingBottom='2%'>
-                <Button variant='outlined' endIcon={<ArrowForward />} style={{ backgroundColor: isBtn ? '#f24e1e' : 'transparent', color: isBtn ? 'white' : '#f24e1e', border: '1px solid #f24e1e', borderRadius: '20px', marginRight: '10px', fontWeight: 'bold', textTransform: 'none', boxShadow: isBtn ? '0px 2px 2px 2px rgba(0,0,0,0.15)' : 'none' }} onMouseOver={()=>setIsBtn(true)} onMouseOut={()=>setIsBtn(false)}>Get Started Now</Button>
-            </Box> 
+            <Box display={{ xs: 'none', sm: 'none', md: 'flex', lg: 'flex', xl: 'flex' }} justifyContent='center' marginTop='3%' paddingBottom='2%'>
+                <NavLink to='/our-services'>
+                    <Button variant='outlined' endIcon={<ArrowForward />} style={{ backgroundColor: isBtn ? '#f24e1e' : 'transparent', color: isBtn ? 'white' : '#f24e1e', border: '1px solid #f24e1e', borderRadius: '20px', marginRight: '10px', fontWeight: 'bold', textTransform: 'none', boxShadow: isBtn ? '0px 2px 2px 2px rgba(0,0,0,0.15)' : 'none' }} onMouseOver={() => setIsBtn(true)} onMouseOut={() => setIsBtn(false)}>Get Started Now</Button>
+                </NavLink>
+            </Box>
             { /* For larger screens than md */}
-            <Box display={{xs: 'flex', sm: 'flex', md: 'none', lg: 'none', xl: 'none'}} justifyContent='center' marginTop='3%' paddingBottom='5%'>
-                <Button variant='outlined' endIcon={<ArrowForward />} style={{ backgroundColor: 'transparent', color: '#f24e1e', border: '1px solid #f24e1e', borderRadius: '20px', marginRight: '10px', fontWeight: 'bold', textTransform: 'none' }} >Get Started Now</Button>
+            <Box display={{ xs: 'flex', sm: 'flex', md: 'none', lg: 'none', xl: 'none' }} justifyContent='center' marginTop='3%' paddingBottom='10%'>
+                <NavLink to='/our-services'>
+                    <Button variant='outlined' endIcon={<ArrowForward />} style={{ backgroundColor: 'transparent', color: '#f24e1e', border: '1px solid #f24e1e', borderRadius: '20px', marginRight: '10px', fontWeight: 'bold', textTransform: 'none' }} >Get Started Now</Button>
+                </NavLink>
             </Box>
 
         </Box>

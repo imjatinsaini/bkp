@@ -1,6 +1,7 @@
 import { ArrowForward, FavoriteBorder, IosShare, Visibility } from '@mui/icons-material'
 import { Box, Button, Grid, IconButton, Paper, Typography } from '@mui/material'
 import React, { useState } from 'react'
+import { NavLink } from 'react-router-dom'
 
 const NewsFeed = () => {
 
@@ -51,7 +52,7 @@ const NewsFeed = () => {
                 <Grid item md={3} display={{ xs: 'none', sm: 'none', md: 'block', lg: 'block' }} marginRight='5%' marginLeft='4%' >
                     <Box>
                         <Paper variant='outlined' style={{ background: 'transparent', display: 'flex', flexDirection: 'column', borderRadius: '20px' }}>
-                            <img src='/images/home/news_pongal.png' style={{filter: isPongal}} alt='ponga news' width='100%' onMouseOver={() => setIsPongal('brightness(0.5)')} onMouseOut={() => setIsPongal('brightness(1)')} />
+                            <img src='/images/home/news_pongal.png' style={{ filter: isPongal }} alt='ponga news' width='100%' onMouseOver={() => setIsPongal('brightness(0.5)')} onMouseOut={() => setIsPongal('brightness(1)')} />
                             <Box paddingLeft='4.5%' paddingRight='4.5%' bgcolor='white' paddingBottom='5%' borderRadius='0px 0px 15px 15px'>
                                 <Typography style={{ fontSize: '24px', fontWeight: '500', marginTop: '3%' }}>What to do on Pongal?</Typography>
                                 <Typography style={{ fontSize: '14px', fontWeight: '500', opacity: '70%' }}>Pongal is a popular harvest festival celebrated in the southern Indian state of Tamil Nadu. It is a time for expressing gratitude to the sun god for a bountiful harvest. Here are some traditional activities.....................read more.</Typography>
@@ -76,7 +77,7 @@ const NewsFeed = () => {
                 <Grid item md={3} display={{ xs: 'none', sm: 'none', md: 'block', lg: 'block' }} marginRight='5%' marginLeft='4%' >
                     <Box>
                         <Paper variant='outlined' style={{ background: 'transparent', display: 'flex', flexDirection: 'column', borderRadius: '20px' }}>
-                            <img src='/images/home/news_holi.png' style={{filter: isHoli}} alt='holi news' width='100%' onMouseOver={() => setIsHoli('brightness(0.5)')} onMouseOut={() => setIsHoli('brightness(1)')} />
+                            <img src='/images/home/news_holi.png' style={{ filter: isHoli }} alt='holi news' width='100%' onMouseOver={() => setIsHoli('brightness(0.5)')} onMouseOut={() => setIsHoli('brightness(1)')} />
                             <Box paddingLeft='4.5%' paddingRight='4.5%' bgcolor='white' paddingBottom='5%' borderRadius='0px 0px 15px 15px'>
                                 <Typography style={{ fontSize: '24px', fontWeight: '500', marginTop: '3%' }}>What to do on Holi?</Typography>
                                 <Typography style={{ fontSize: '14px', fontWeight: '500', opacity: '70%' }}>On the day of Holi, families and friends gather in their backyards, terraces, neighborhoods, or driveways (like us) to play Holi with brightly colored powders to throw and smear on clothes ....read more.</Typography>
@@ -101,7 +102,7 @@ const NewsFeed = () => {
                 <Grid item md={3} display={{ xs: 'none', sm: 'none', md: 'block', lg: 'block' }} marginRight='0%' marginLeft='4%' >
                     <Box>
                         <Paper variant='outlined' style={{ background: 'transparent', display: 'flex', flexDirection: 'column', borderRadius: '20px' }}>
-                            <img src='/images/home/news_diwali.png' style={{filter: isDiwali}} alt='diwali news' width='100%' onMouseOver={() => setIsDiwali('brightness(0.5)')} onMouseOut={() => setIsDiwali('brightness(1)')} />
+                            <img src='/images/home/news_diwali.png' style={{ filter: isDiwali }} alt='diwali news' width='100%' onMouseOver={() => setIsDiwali('brightness(0.5)')} onMouseOut={() => setIsDiwali('brightness(1)')} />
                             <Box paddingLeft='4.5%' paddingRight='4.5%' bgcolor='white' paddingBottom='5%' borderRadius='0px 0px 15px 15px'>
                                 <Typography style={{ fontSize: '24px', fontWeight: '500', marginTop: '3%' }}>What to do on Diwali?</Typography>
                                 <Typography style={{ fontSize: '14px', fontWeight: '500', opacity: '70%' }}>During Diwali, also known as the Festival of Lights, there are several cherished traditions to partake in. Homes are meticulously cleaned and adorned with colorful rangoli patterns, twinkling diyas, and vibrant......read more.</Typography>
@@ -204,11 +205,15 @@ const NewsFeed = () => {
 
             { /* For larger screens than md */}
             <Box display={{ xs: 'none', sm: 'none', md: 'flex', lg: 'flex', xl: 'flex' }} justifyContent='center' marginTop='3%' paddingBottom='2%'>
-                <Button variant='outlined' endIcon={<ArrowForward />} style={{ backgroundColor: isBtn ? '#f24e1e' : 'transparent', color: isBtn ? 'white' : '#f24e1e', border: '1px solid #f24e1e', borderRadius: '20px', marginRight: '10px', fontWeight: 'bold', textTransform: 'none', boxShadow: isBtn ? '0px 2px 2px 2px rgba(0,0,0,0.15)' : 'none' }} onMouseOver={() => setIsBtn(true)} onMouseOut={() => setIsBtn(false)}>Read More</Button>
+                <NavLink to='/news-feed'>
+                    <Button variant='outlined' endIcon={<ArrowForward />} style={{ backgroundColor: isBtn ? '#f24e1e' : 'transparent', color: isBtn ? 'white' : '#f24e1e', border: '1px solid #f24e1e', borderRadius: '20px', marginRight: '10px', fontWeight: 'bold', textTransform: 'none', boxShadow: isBtn ? '0px 2px 2px 2px rgba(0,0,0,0.15)' : 'none' }} onMouseOver={() => setIsBtn(true)} onMouseOut={() => setIsBtn(false)}>Read More</Button>
+                </NavLink>
             </Box>
             { /* For larger screens than md */}
             <Box display={{ xs: 'flex', sm: 'flex', md: 'none', lg: 'none', xl: 'none' }} justifyContent='center' marginTop='3%' paddingBottom='5%'>
-                <Button variant='outlined' endIcon={<ArrowForward />} style={{ backgroundColor: 'transparent', color: '#f24e1e', border: '1px solid #f24e1e', borderRadius: '20px', marginRight: '10px', fontWeight: 'bold', textTransform: 'none' }}>Read more</Button>
+                <NavLink to='/news-feed'>
+                    <Button variant='outlined' endIcon={<ArrowForward />} style={{ backgroundColor: 'transparent', color: '#f24e1e', border: '1px solid #f24e1e', borderRadius: '20px', marginRight: '10px', fontWeight: 'bold', textTransform: 'none' }}>Read more</Button>
+                </NavLink>
             </Box>
 
         </Box>

@@ -1,6 +1,7 @@
 import { ArrowForward } from '@mui/icons-material'
 import { Box, Button, Grid, Paper, Typography } from '@mui/material'
 import React, { useState } from 'react'
+import { NavLink } from 'react-router-dom'
 
 const TourGuide = () => {
 
@@ -52,7 +53,9 @@ const TourGuide = () => {
                     <Box>
                         <Box>
                             <Paper variant='outlined' style={{ background: 'transparent', border: 'none' }}>
-                                <img src='/images/home/tour_kedarnath.png' style={{filter: isKedarnath}} width='100%' onMouseOver={() => setIsKedarnath('brightness(0.25)')} onMouseOut={() => setIsKedarnath('brightness(1)')} />
+                                <NavLink to='/tour/kedarnath'>
+                                    <img src='/images/home/tour_kedarnath.png' style={{ filter: isKedarnath }} width='100%' onMouseOver={() => setIsKedarnath('brightness(0.25)')} onMouseOut={() => setIsKedarnath('brightness(1)')} />
+                                </NavLink>
                             </Paper>
                         </Box>
                         <Box display='flex' justifyContent='center' >
@@ -64,7 +67,9 @@ const TourGuide = () => {
                     <Box>
                         <Box>
                             <Paper variant='outlined' style={{ background: 'transparent', border: 'none' }}>
-                                <img src='/images/home/tour_vrindavan.png' style={{filter: isVrindavan}} width='100%' onMouseOver={() => setIsVrindavan('brightness(0.25)')} onMouseOut={() => setIsVrindavan('brightness(1)')} />
+                                <NavLink to='/tour/vrindavan'>
+                                    <img src='/images/home/tour_vrindavan.png' style={{ filter: isVrindavan }} width='100%' onMouseOver={() => setIsVrindavan('brightness(0.25)')} onMouseOut={() => setIsVrindavan('brightness(1)')} />
+                                </NavLink>
                             </Paper>
                         </Box>
                         <Box display='flex' justifyContent='center' >
@@ -76,7 +81,9 @@ const TourGuide = () => {
                     <Box>
                         <Box>
                             <Paper variant='outlined' style={{ background: 'transparent', border: 'none' }}>
-                                <img src='/images/home/tour_somnath.png' style={{filter: isSomnath}} width='100%' onMouseOver={() => setIsSomnath('brightness(0.25)')} onMouseOut={() => setIsSomnath('brightness(1)')} />
+                                <NavLink to='/tour/somnath'>
+                                    <img src='/images/home/tour_somnath.png' style={{ filter: isSomnath }} width='100%' onMouseOver={() => setIsSomnath('brightness(0.25)')} onMouseOut={() => setIsSomnath('brightness(1)')} />
+                                </NavLink>
                             </Paper>
                         </Box>
                         <Box display='flex' justifyContent='center' >
@@ -90,7 +97,9 @@ const TourGuide = () => {
                     <Box>
                         <Box>
                             <Paper variant='outlined' style={{ background: 'transparent', border: 'none' }}>
-                                <img src='/images/home/tour_kedarnath.png' width='100%' />
+                                <NavLink to='/tour/kedarnath'>
+                                    <img src='/images/home/tour_kedarnath.png' width='100%' />
+                                </NavLink>
                             </Paper>
                         </Box>
                         <Box display='flex' justifyContent='center' >
@@ -102,7 +111,9 @@ const TourGuide = () => {
                     <Box>
                         <Box>
                             <Paper variant='outlined' style={{ background: 'transparent', border: 'none' }}>
-                                <img src='/images/home/tour_vrindavan.png' width='100%' />
+                                <NavLink to='/tour/vrindavan'>
+                                    <img src='/images/home/tour_vrindavan.png' width='100%' />
+                                </NavLink>
                             </Paper>
                         </Box>
                         <Box display='flex' justifyContent='center' >
@@ -114,7 +125,9 @@ const TourGuide = () => {
                     <Box>
                         <Box>
                             <Paper variant='outlined' style={{ background: 'transparent', border: 'none' }}>
-                                <img src='/images/home/tour_somnath.png' width='100%' />
+                                <NavLink to='/tour/kedarnath'>
+                                    <img src='/images/home/tour_somnath.png' width='100%' />
+                                </NavLink>
                             </Paper>
                         </Box>
                         <Box display='flex' justifyContent='center' >
@@ -126,11 +139,15 @@ const TourGuide = () => {
 
             { /* For larger screens than md */}
             <Box display={{ xs: 'none', sm: 'none', md: 'flex', lg: 'flex', xl: 'flex' }} justifyContent='center' marginTop='3%' paddingBottom='2%'>
-                <Button variant='outlined' endIcon={<ArrowForward />} style={{ backgroundColor: isBtn ? '#f24e1e' : 'transparent', color: 'white', border: isBtn ? '1px solid #f24e1e' : '1px solid white', borderRadius: '20px', marginRight: '10px', fontWeight: 'bold', textTransform: 'none', boxShadow: isBtn ? '0px 2px 2px 2px rgba(0,0,0,0.15)' : 'none' }} onMouseOver={() => setIsBtn(true)} onMouseOut={() => setIsBtn(false)}>Explore</Button>
+                <NavLink to='/tour'>
+                    <Button variant='outlined' endIcon={<ArrowForward />} style={{ backgroundColor: isBtn ? '#f24e1e' : 'transparent', color: 'white', border: isBtn ? '1px solid #f24e1e' : '1px solid white', borderRadius: '20px', marginRight: '10px', fontWeight: 'bold', textTransform: 'none', boxShadow: isBtn ? '0px 2px 2px 2px rgba(0,0,0,0.15)' : 'none' }} onMouseOver={() => setIsBtn(true)} onMouseOut={() => setIsBtn(false)}>Explore</Button>
+                </NavLink>
             </Box>
             { /* For larger screens than md */}
-            <Box display={{ xs: 'flex', sm: 'flex', md: 'none', lg: 'none', xl: 'none' }} justifyContent='center' marginTop='3%' paddingBottom='5%'>
-                <Button variant='outlined' endIcon={<ArrowForward />} style={{ backgroundColor: 'transparent', color: 'white', border: '1px solid white', borderRadius: '20px', marginRight: '10px', fontWeight: 'bold', textTransform: 'none' }}>Explore</Button>
+            <Box display={{ xs: 'flex', sm: 'flex', md: 'none', lg: 'none', xl: 'none' }} justifyContent='center' marginTop='3%' paddingBottom='10%'>
+                <NavLink to='/tour'>
+                    <Button variant='outlined' endIcon={<ArrowForward />} style={{ backgroundColor: 'transparent', color: 'white', border: '1px solid white', borderRadius: '20px', marginRight: '10px', fontWeight: 'bold', textTransform: 'none' }}>Explore</Button>
+                </NavLink>
             </Box>
         </Box>
     )

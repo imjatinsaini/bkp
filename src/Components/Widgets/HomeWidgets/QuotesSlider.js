@@ -8,7 +8,7 @@ const QuotesSlider = () => {
     const [isPrevious, setIsPrevious] = useState(false)
 
     return (
-        <Box style={{ backgroundImage: "url('/images/home/quotes_background.png')",backgroundSize: 'cover   ' ,padding: '2%' }}>
+        <Box style={{ backgroundImage: "url('/images/home/quotes_background.png')",backgroundSize: 'contain' ,padding: '2%' }}>
             <Box border='1px solid white' borderRadius='10px' >
                 { /* For larger screens than sm */}
                 <Box display={{ xs: 'none', sm: 'none', md: 'flex', lg: 'flex' }} justifyContent='center' marginLeft='30%' marginRight='30%'>

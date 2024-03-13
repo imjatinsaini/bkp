@@ -157,10 +157,15 @@ const NewNavbar = () => {
                         <MenuOutlined />
                     </IconButton>
                     <Drawer anchor='left' open={sidebar} onClose={() => setSidebar(false)} style={{ width: '100%' }}>
-                        <Box width='100vw' role='presentation' display='grid' border='1px solid red' >
-                            <Box display='flex' justifyContent='space-between'>
-                                <Box>
-                                    <Button>Login/ Signup</Button>
+                        <Box width='100vw' role='presentation' display='grid'>
+                            <Box display='flex' justifyContent='space-between' paddingTop='5%' paddingLeft='5%' paddingRight='5%' paddingBottom='5%' boxShadow='0px 4px 8px rgba(0,0,0,0.3)'>
+                                <Box bgcolor='#f24e1e' borderRadius='10px'>
+                                    <NavLink to='/login'>
+                                        <Button style={{ color: 'white', textTransform: 'none' }}>
+
+                                            Login/ Signup
+                                        </Button>
+                                    </NavLink>
                                 </Box>
                                 <Box>
                                     <IconButton onClick={() => setSidebar(false)}>
@@ -168,37 +173,84 @@ const NewNavbar = () => {
                                     </IconButton>
                                 </Box>
                             </Box>
-                            <Box position='relative' display='inline-block'>
-                                <NavLink to='/'>
-                                    <Button variant='text'>
-                                        Home
-                                    </Button>
-                                </NavLink>
-                            </Box>
-                            <Box display='flex'>
+                            <Box marginLeft='5%' marginTop='5%' marginRight='5%'>
                                 <Box position='relative' display='inline-block'>
-                                    <Button className='nav-btn'>
-                                        <NavLink to='/north-mandir' className='nav-btn'>Mandir</NavLink>
+                                    <NavLink to='/'>
+                                        <Button className='nav-btn'>
+                                            Home
+                                        </Button>
+                                    </NavLink>
+                                </Box>
+                                <Box marginLeft='3%'>
+                                    <Box sx={{ width: '100%', border: 'none', borderTop: '1px solid black', marginBottom: '2%' }} mx='auto' />
+                                </Box>
+
+                                <Box display='flex'>
+                                    <Box position='relative' display='inline-block'>
+                                        <Button className='nav-btn'>
+                                            <NavLink to='/north-mandir' className='nav-btn'>Mandir</NavLink>
+                                        </Button>
+                                    </Box>
+                                </Box>
+                                <Box marginLeft='3%'>
+                                    <Box sx={{ width: '100%', border: 'none', borderTop: '1px solid black', marginBottom: '2%' }} mx='auto' />
+                                </Box>
+
+                                <Box>
+                                    <Button variant='text' className='nav-btn'>
+                                        <NavLink to='/our-services' className='nav-btn'>Our Services</NavLink>
                                     </Button>
                                 </Box>
-                                <Box position='relative' display='inline-block'>
-                                    <Button variant='text' >
-                                        <KeyboardArrowDown />
-                                        <Box className='nav-hover'>
-                                            <NavLink to='/north-mandir'>North India</NavLink>
-                                            <NavLink to='/west-mandir'>West India</NavLink>
-                                            <NavLink to='/east-mandir'>East India</NavLink>
-                                            <NavLink to='/south-mandir'>South India</NavLink>
-                                        </Box>
+                                <Box marginLeft='3%'>
+                                    <Box sx={{ width: '100%', border: 'none', borderTop: '1px solid black', marginBottom: '2%' }} mx='auto' />
+                                </Box>
+
+                                <Box>
+                                    <Button variant='text' className='nav-btn'>
+                                        <NavLink to='/shops' className='nav-btn'>Shops</NavLink>
                                     </Button>
                                 </Box>
+                                <Box marginLeft='3%'>
+                                    <Box sx={{ width: '100%', border: 'none', borderTop: '1px solid black', marginBottom: '2%' }} mx='auto' />
+                                </Box>
+
+                                <Box>
+                                    <Button variant='text' className='nav-btn'>
+                                        <NavLink to='/sanatan-library' className='nav-btn'>Sanatan Library</NavLink>
+                                    </Button>
+                                </Box>
+                                <Box marginLeft='3%'>
+                                    <Box sx={{ width: '100%', border: 'none', borderTop: '1px solid black', marginBottom: '2%' }} mx='auto' />
+                                </Box>
+
+                                <Box>
+                                    <Button variant='text' className='nav-btn'>
+                                        <NavLink to='/wellness-practice' className='nav-btn'>Wellness Practice</NavLink>
+                                    </Button>
+                                </Box>
+                                <Box marginLeft='3%'>
+                                    <Box sx={{ width: '100%', border: 'none', borderTop: '1px solid black', marginBottom: '2%' }} mx='auto' />
+                                </Box>
+
+                                <Box>
+                                    <Button variant='text' className='nav-btn'>
+                                        <NavLink to='/blogs' className='nav-btn'>Blogs</NavLink>
+                                    </Button>
+                                </Box>
+                                <Box marginLeft='3%'>
+                                    <Box sx={{ width: '100%', border: 'none', borderTop: '1px solid black', marginBottom: '2%' }} mx='auto' />
+                                </Box>
+
+                                <Box>
+                                    <Button variant='text' className='nav-btn'>
+                                        <NavLink to='/donate' className='nav-btn'>Donate</NavLink>
+                                    </Button>
+                                </Box>
+                                <Box marginLeft='3%'>
+                                    <Box sx={{ width: '100%', border: 'none', borderTop: '1px solid black', marginBottom: '2%' }} mx='auto' />
+                                </Box>
+
                             </Box>
-                            <Button variant='text' className='navbox-btn'>Our Services</Button>
-                            <Button variant='text' className='navbox-btn'>Shops</Button>
-                            <Button variant='text' className='navbox-btn'>Sanatan Library</Button>
-                            <Button variant='text' className='navbox-btn'>Wellness Practice</Button>
-                            <Button variant='text' className='navbox-btn'>Blogs</Button>
-                            <Button variant='text' className='navbox-btn'>Donate</Button>
                         </Box>
                     </Drawer>
                 </Grid>

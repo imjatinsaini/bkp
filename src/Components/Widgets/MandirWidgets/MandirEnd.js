@@ -13,7 +13,7 @@ const MandirEnd = () => {
             </div> */}
 
 
-            <Grid container paddingTop='80px'>
+            <Grid container paddingTop='0px'>
                 <Grid item xs={12}>
                     <Box display='flex' justifyContent='center' alignItems='center'>
                         <Paper variant='outlined' style={{ background: 'transparent', marginRight: '1.5%', border: 'none' }}>
