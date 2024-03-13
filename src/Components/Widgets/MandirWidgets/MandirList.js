@@ -1,5 +1,5 @@
 import { Box, Button, Grid, Paper, Typography } from '@mui/material'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react';
 import Carousel from 'react-material-ui-carousel'
 import { NavLink } from 'react-router-dom';
 
@@ -182,3 +182,5 @@ const MandirCard = ({ name, place, content, btnText, img, navlink }) => {
 }
 
 export default MandirList
+
+
