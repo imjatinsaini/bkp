@@ -37,6 +37,18 @@ import Ramanathaswamy from './Components/Pages/Mandir/South Mandir/Ramanathaswam
 import Airavatesvara from './Components/Pages/Mandir/South Mandir/Airavatesvara';
 import Brihadeeswara from './Components/Pages/Mandir/South Mandir/Brihadeeswara';
 import Aihole from './Components/Pages/Mandir/South Mandir/Aihole';
+import Books from './Components/Pages/Shop/ShopPages/Books';
+import Yogastore from './Components/Pages/Shop/ShopPages/Yoga';
+import Bodycare from './Components/Pages/Shop/ShopPages/Bodycare';
+import Clothing from './Components/Pages/Shop/ShopPages/Clothing';
+import Foodforfast from './Components/Pages/Shop/ShopPages/Foodfarfast';
+import Spiritual from './Components/Pages/Shop/ShopPages/SpiritualAccessories';
+import PujaSamagri from './Components/Pages/Shop/ShopPages/Pujasamagri';
+import Donationcomingsoon from './Components/Pages/Donationcomingsoon/Donationcomingsoon';
+import Healthandimmunity from './Components/Pages/Shop/ShopPages/Healthandimmunity';
+
+
+
 
 
 function App() {
@@ -87,8 +99,28 @@ function App() {
 
         {/* Shops routes */}
         <Route path='/shops' element={<Shops />} />
-        
+
+        <Route path='/shops-books' element={<Books/>} />
+        <Route path='/shops-yoga' element={<Yogastore/>} />
+        <Route path='/shops-bodycare' element={<Bodycare/>} />
+        <Route path='/shops-clothing' element={<Clothing/>} />
+        <Route path='/shops-foodforfast' element={<Foodforfast/>} />
         <Route path='/shops/rudraksha' element={<Rudraksha />} />
+        <Route path='/shops-spiritual' element={<Spiritual/>} />
+        <Route path='/shops-pujasamagri' element={<PujaSamagri/>} />
+        <Route path='/shops-healthandimmunity' element={<Healthandimmunity/>} />
+
+
+
+
+
+
+        <Route path='/donationcomingsoon' element={<Donationcomingsoon/>} />
+
+
+
+
+        
 
         {/* Path not found */}
         <Route path='/*'  element={<PageNotFound />} />

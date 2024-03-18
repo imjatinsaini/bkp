@@ -69,15 +69,15 @@ const NewNavbar = () => {
                                 <Button variant='text' className='nav-btn'>
                                     <NavLink to='/shops' className='nav-btn'>Shops ⮟</NavLink>
                                     <Box className='nav-hover'>
-                                        <NavLink to='/shops/books'>Books</NavLink>
-                                        <NavLink to='/shops/body-care'>Body Care</NavLink>
-                                        <NavLink to='/shops/clothing'>Clothing</NavLink>
-                                        <NavLink to='/shops/food-for-fast'>Food for Fast</NavLink>
-                                        <NavLink to='/shops/health-immunity'>Health & Immunity</NavLink>
-                                        <NavLink to='/shops/puja-samagri'>Puja Samagri</NavLink>
+                                        <NavLink to='/shops-books'>Books</NavLink>
+                                        <NavLink to='/shops-bodycare'>Body Care</NavLink>
+                                        <NavLink to='/shops-clothing'>Clothing</NavLink>
+                                        <NavLink to='/shops-foodforfast'>Food for Fast</NavLink>
+                                        <NavLink to='/shops-healthandimmunity'>Health & Immunity</NavLink>
+                                        <NavLink to='/shops-pujasamagri'>Puja Samagri</NavLink>
                                         <NavLink to='/shops/rudraksha'>Rudraksha</NavLink>
-                                        <NavLink to='/shops/spiritual-accessories'>Spiritual Accessories</NavLink>
-                                        <NavLink to='/shops/yoga-store'>Yoga Store</NavLink>
+                                        <NavLink to='/shops-spiritual'>Spiritual Accessories</NavLink>
+                                        <NavLink to='/shops-yoga'>Yoga Store</NavLink>
                                     </Box>
                                 </Button>
                             </Box>
@@ -107,7 +107,7 @@ const NewNavbar = () => {
                                     </Button>
                                 </NavLink>
                             </Box><Box position='relative' display='inline-block'>
-                                <NavLink to='/donate'>
+                                <NavLink to='/donationcomingsoon'>
                                     <Button variant='text' className='nav-btn'>
                                         Donate
                                     </Button>

@@ -233,14 +233,14 @@ const Donate = () => {
                             </Box>
 
                             <Box display={{ xs: 'none', sm: 'none', md: 'block', lg: 'block', xl: 'block' }}>
-                                <NavLink to='/donate'>
+                                <NavLink to='/donationcomingsoon'>
                                     <Button style={{ backgroundColor: isDonate ? 'white' : '#f24e1e', color: isDonate ? '#f24e1e' : 'white', fontWeight: '500', textTransform: 'none', borderRadius: '20px', paddingLeft: '3%', paddingRight: '3%' }} onMouseOver={() => setIsDonate(true)} onMouseOut={() => setIsDonate(false)}>
                                         Donate Now
                                     </Button>
                                 </NavLink>
                             </Box>
                             <Box display={{ xs: 'block', sm: 'block', md: 'none', lg: 'none', xl: 'none' }} marginBottom='5%'>
-                                <NavLink to='/donate'>
+                                <NavLink to='/donationcomingsoon'>
                                     <Button style={{ backgroundColor: '#f24e1e', color: 'white', fontWeight: '500', textTransform: 'none', borderRadius: '20px', paddingLeft: '1%', paddingRight: '1%', fontSize: '6px' }}>
                                         Donate Now
                                     </Button>
@@ -260,3 +260,101 @@ const Donate = () => {
 }
 
 export default Donate
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import { Box, Typography } from '@mui/material'
+// import React from 'react'
+// import NewNavbar from '../../Layout/NewNavbar'
+// import Footer from '../../Widgets/HomeWidgets/Footer'
+
+
+// const Donationcomingsoon = () => {
+//   return (
+//     <Box>
+//         <NewNavbar/>
+//       <Box paddingTop='100px'></Box>
+//         <Box display={{ xs: 'none', sm: 'none', md: 'block', lg: 'block', xl: 'block' }}>
+//         <Box height='86vh' position='relative' bgcolor='rgba(255, 101, 5, 0.7)' sx={{ backgroundImage: "url('/images/donate/cow.png')", backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition: 'center' }}>
+//         <Box position='absolute' gap width='100%' height='100%' display='flex' flexDirection='column' justifyContent='center' alignItems='center'>
+//           <Typography color='white' fontSize='38px'  style={{ fontWeight: 400}}>COMING SOON...</Typography>
+//           <Typography color='white' fontSize='30px' >Small Efforts Make Big Changes 
+//              </Typography>
+
+//              <Typography color='white' fontSize='20px'>
+//          The Indian cow has pivotal place in the social, economic, agriculture, medicine, and</Typography>
+
+//           <Typography color='white' fontSize='20px'>
+//           spiritual spheres of Indian civilization, It has played a key role in the economic </Typography>
+
+//           <Typography color='white' fontSize='20px'>
+//           development in India since ancient times. </Typography>
+
+        
+//           <Box width='50%' marginTop='3%'>
+
+//             </Box>
+//         </Box>
+//         </Box>
+
+
+       
+//     </Box>
+
+//     <Box display={{ xs: 'block', sm: 'block', md: 'none', lg: 'none', xl: 'none' }}>
+//         <Box height='25vh' position='relative' bgcolor='rgba(255, 101, 5, 0.7)' sx={{ backgroundImage: "url('/images/shops/books/cow.png')", backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition: 'center' }}>
+//         <Box position='absolute' width='100%' height='100%' display='flex' flexDirection='column' justifyContent='center' alignItems='center'>
+//         <Typography color='white' fontSize='20px' fontweight='bold' style={{ fontWeight: 600 }}>Coming Soon</Typography>
+//         <Typography color='white' fontSize='12px' >This section of the website is currently under construction.
+//           </Typography>
+//           <Typography color='white' fontSize='12px' >
+//           Sign up to get notified when it launches.</Typography>
+//           <Box width='50%' marginTop='3%'>
+
+//             </Box>
+//         </Box>
+//         </Box>
+
+
+      
+//     </Box>
+//     {/* <Box>
+//         <img src='/images/pnf/pnf_end.png' width='100%' />
+//       </Box> */}
+//     <Footer/>
+//     </Box>
+    
+
+    
+
+    
+//   )
+// }
+
+// export default Donationcomingsoon

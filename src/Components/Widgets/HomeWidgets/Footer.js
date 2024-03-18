@@ -17,7 +17,12 @@ const Footer = () => {
                         <Box display='flex' alignItems='center'>
                             <Typography fontWeight='bold' fontSize='20px'>Follow us</Typography>
                             <IconButton style={{ color: '#1da1f2', }}><Twitter /></IconButton>
-                            <IconButton style={{ color: '#c33e86' }}><Instagram /></IconButton>
+                            <IconButton style={{ color: '#c33e86' }}>
+                            <a href="https://www.instagram.com/bhagwankaprashad?igsh=MWQ1ZjEwNnVlMTl5NA%3D%3D&utm_source=qr " target="_blank" rel="noopener noreferrer">
+                             <Instagram />
+                             </a>
+                                
+                                </IconButton>
                             <IconButton style={{ color: '#1da1f2' }}><Facebook /></IconButton>
                         </Box>
                     </Box>
@@ -28,25 +33,25 @@ const Footer = () => {
                         <NavLink to='/shops/rudraksha' style={{ textDecoration: 'none' }}>
                             <Typography fontSize='16px' fontWeight='100' color='white'>Rudraksha</Typography>
                         </NavLink>
-                        <NavLink to='/shops/puja-samagri' style={{ textDecoration: 'none', marginTop: '10%' }}>
+                        <NavLink to='/shops-pujasamagri' style={{ textDecoration: 'none', marginTop: '10%' }}>
                             <Typography fontSize='16px' color='white' fontWeight='100'>Puja Samagri</Typography>
                         </NavLink>
-                        <NavLink to='/shops/yoga-store' style={{ textDecoration: 'none', marginTop: '10%' }}>
+                        <NavLink to='/shops-yoga' style={{ textDecoration: 'none', marginTop: '10%' }}>
                             <Typography fontSize='16px' color='white' fontWeight='100'>Yoga Store</Typography>
                         </NavLink>
-                        <NavLink to='/shops/health-immunity' style={{ textDecoration: 'none', marginTop: '10%' }}>
+                        <NavLink to='/shops-healthandimmunity' style={{ textDecoration: 'none', marginTop: '10%' }}>
                             <Typography fontSize='16px' color='white' fontWeight='100'>Health & Immunity</Typography>
                         </NavLink>
-                        <NavLink to='/shops/food-for-fast' style={{ textDecoration: 'none', marginTop: '10%' }}>
+                        <NavLink to='/shops-foodforfast' style={{ textDecoration: 'none', marginTop: '10%' }}>
                             <Typography fontSize='16px' color='white' fontWeight='100'>Food for Fast</Typography>
                         </NavLink>
-                        <NavLink to='/shops/clothing' style={{ textDecoration: 'none', marginTop: '10%' }}>
+                        <NavLink to='/shops-clothing' style={{ textDecoration: 'none', marginTop: '10%' }}>
                             <Typography fontSize='16px' color='white' fontWeight='100'>Clothing</Typography>
                         </NavLink>
-                        <NavLink to='/shops/body-care' style={{ textDecoration: 'none', marginTop: '10%' }}>
+                        <NavLink to='/shops-bodycare' style={{ textDecoration: 'none', marginTop: '10%' }}>
                             <Typography fontSize='16px' color='white' fontWeight='100'>Body Care</Typography>
                         </NavLink>
-                        <NavLink to='/shops/books' style={{ textDecoration: 'none', marginTop: '10%' }}>
+                        <NavLink to='/shops-books' style={{ textDecoration: 'none', marginTop: '10%' }}>
                             <Typography fontSize='16px' color='white' fontWeight='100'>Books</Typography>
                         </NavLink>
                         <NavLink to='/shops/spiritual-accessories' style={{ textDecoration: 'none', marginTop: '10%' }}>
