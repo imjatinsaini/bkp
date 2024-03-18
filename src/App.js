@@ -61,7 +61,7 @@ function App() {
         {/* Auth routes */}
         <Route path='/login' element={<Login />} />
         <Route path='/create-account' element={<Register />} />
-        <Route path='/otp-verification' element={<OtpVerification />} />
+        <Route path='/otp-verification' element={<OtpVerification />}  />
 
         {/* Mandir routes */}
         <Route path='/north-mandir' element={<NorthMandir />} />

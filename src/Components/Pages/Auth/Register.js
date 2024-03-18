@@ -4,6 +4,7 @@ import './../../../Styles/Register.css'
 import { NavLink } from 'react-router-dom'
 import { Google } from '@mui/icons-material'
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
 
 const Register = () => {
 
@@ -12,59 +13,37 @@ const Register = () => {
   const [password, setPassword] = useState('');
   const [confirm, setConfirm] = useState('');
 
+  const navigate = useNavigate();
+
   const register_user = async () => {
-    const data = {
-      name,
-      email,
-      password
-    }
-
-    console.log(data);
-
-    // axios.post('http://localhost:8000/register', data)
-    //   .then(response => {
-    //     console.log('Registration success:', response.data);
-    //   })
-    //   .catch(error => {
-    //     console.error('Registration failed:', error);
-    //   });
-
-    // axios.post('http://localhost:8000/register', data)
-    // .then(response => {
-    //   console.log("Registration success: ", response.data);
-    // })
-    // .catch(error => {
-    //   console.log("Registration failed: ", error);
-    // });
-
-    // fetch('http://localhost:8000/register', {
-    //   method: 'POST',
-    //   headers: {
-    //     'Content-Type': 'application/json',
-    //     // Add any additional headers here
-    //   },
-    //   body: JSON.stringify(data)
-    // })
-    // console.log(JSON.stringify(data));
-
     try {
-      const response = await fetch('http://192.168.137.1:8000/register', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
+      const res = await axios.post(
+        "http://localhost:8000/register",
+        {
+          name: `${name}`,
+          email: `${email}`,
+          password: `${password}`,
         },
-        body: JSON.stringify(data),
-      });
-      // const dataFetched = await response.json();
-      if (response.ok) {
-        console.log("DONE")
-      } else {
-        console.log("Not done")
-      }
-    } catch (error) {
-      console.error('Error registering user:', error);
-    }
+        {
+          headers: {
+            'Content-Type': 'application/json; charset=utf-8',
+          },
+        }
+      );
 
+      if (res.status === 200) {
+        console.log(res.data._id);
+
+        // Temporary save the userId to check during otp verification
+        const tempId = res.data._id;
+        localStorage.setItem('tempId',tempId);
+        
+        navigate('/otp-verification');
+      }
+
+    } catch (e) {
+      console.log("ERROR: SOMETING WENT WRONG");
+    }
   }
 
   return (
@@ -141,14 +120,14 @@ const Register = () => {
           </Box>
           <Box marginLeft='5%' marginRight='5%' marginTop='3%'>
             <Box>
-              <TextField placeholder='Name' fullWidth='true' sx={{ border: 'none', "& fieldset": { border: 'none' }, marginBottom: '3%' }} className='text-field-auth'></TextField>
-              <TextField placeholder='Email' fullWidth='true' sx={{ border: 'none', "& fieldset": { border: 'none' }, marginBottom: '3%' }} className='text-field-auth'></TextField>
-              <TextField placeholder='Password' fullWidth='true' sx={{ border: 'none', "& fieldset": { border: 'none' }, marginBottom: '3%' }} className='text-field-auth'></TextField>
-              <TextField placeholder='Confirm Password' fullWidth='true' sx={{ border: 'none', "& fieldset": { border: 'none' }, marginBottom: '3%' }} className='text-field-auth'></TextField>
+              <TextField placeholder='Name' fullWidth='true' sx={{ border: 'none', "& fieldset": { border: 'none' }, marginBottom: '3%' }} className='text-field-auth' value={name} onChange={(event) => setName(event.target.value)}></TextField>
+              <TextField placeholder='Email' fullWidth='true' sx={{ border: 'none', "& fieldset": { border: 'none' }, marginBottom: '3%' }} className='text-field-auth' value={email} onChange={(event) => setEmail(event.target.value)}></TextField>
+              <TextField placeholder='Password' fullWidth='true' sx={{ border: 'none', "& fieldset": { border: 'none' }, marginBottom: '3%' }} className='text-field-auth' value={password} onChange={(event) => setPassword(event.target.value)}></TextField>
+              <TextField placeholder='Confirm Password' fullWidth='true' sx={{ border: 'none', "& fieldset": { border: 'none' }, marginBottom: '3%' }} className='text-field-auth' value={confirm} onChange={(event) => setConfirm(event.target.value)}></TextField>
             </Box>
             <Box>
               <Box marginBottom='4%' marginTop='7%'>
-                <Button style={{ backgroundColor: '#f24e1e', color: 'white', width: '100%', borderRadius: '20px', textTransform: 'none' }}>
+                <Button onClick={register_user} style={{ backgroundColor: '#f24e1e', color: 'white', width: '100%', borderRadius: '20px', textTransform: 'none' }}>
                   <Typography fontWeight='bold'>Sign Up</Typography>
                 </Button>
               </Box>
@@ -189,14 +168,14 @@ const Register = () => {
           </Box>
           <Box marginLeft='7%' marginRight='7%' marginTop='3%'>
             <Box>
-              <TextField placeholder='Name' fullWidth='true' sx={{ border: 'none', "& fieldset": { border: 'none' }, marginBottom: '3%' }} className='text-field-auth'></TextField>
-              <TextField placeholder='Email' fullWidth='true' sx={{ border: 'none', "& fieldset": { border: 'none' }, marginBottom: '3%' }} className='text-field-auth'></TextField>
-              <TextField placeholder='Password' fullWidth='true' sx={{ border: 'none', "& fieldset": { border: 'none' }, marginBottom: '3%' }} className='text-field-auth'></TextField>
-              <TextField placeholder='Confirm Password' fullWidth='true' sx={{ border: 'none', "& fieldset": { border: 'none' }, marginBottom: '3%' }} className='text-field-auth'></TextField>
+              <TextField placeholder='Name' fullWidth='true' sx={{ border: 'none', "& fieldset": { border: 'none' }, marginBottom: '3%' }} className='text-field-auth' value={name} onChange={(event) => setName(event.target.value)}></TextField>
+              <TextField placeholder='Email' fullWidth='true' sx={{ border: 'none', "& fieldset": { border: 'none' }, marginBottom: '3%' }} className='text-field-auth' value={email} onChange={(event) => setEmail(event.target.value)}></TextField>
+              <TextField placeholder='Password' fullWidth='true' sx={{ border: 'none', "& fieldset": { border: 'none' }, marginBottom: '3%' }} className='text-field-auth' value={password} onChange={(event) => setPassword(event.target.value)}></TextField>
+              <TextField placeholder='Confirm Password' fullWidth='true' sx={{ border: 'none', "& fieldset": { border: 'none' }, marginBottom: '3%' }} className='text-field-auth' value={confirm} onChange={(event) => setConfirm(event.target.value)}></TextField>
             </Box>
             <Box>
               <Box marginBottom='4%' marginTop='7%'>
-                <Button style={{ backgroundColor: '#f24e1e', color: 'white', width: '100%', borderRadius: '20px', textTransform: 'none' }}>
+                <Button onClick={register_user} style={{ backgroundColor: '#f24e1e', color: 'white', width: '100%', borderRadius: '20px', textTransform: 'none' }}>
                   <Typography fontWeight='bold'>Sign Up</Typography>
                 </Button>
               </Box>

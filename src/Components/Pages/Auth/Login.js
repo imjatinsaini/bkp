@@ -1,10 +1,57 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Box, Grid, InputAdornment, TextField, Typography, Checkbox, IconButton, Button } from '@mui/material'
 import './../../../Styles/Login.css'
 import { Visibility, Google } from '@mui/icons-material'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
+import axios from 'axios'
+import { useAuth } from '../../../Context/authContext' 
 
 const Login = () => {
+
+    const [user, setUser] = useState('');
+    const [password, setPassword] = useState('');
+
+    const [auth,setAuth] = useAuth();
+
+    const navigate = useNavigate();
+
+    const login_user = async () => {
+        try {
+            const res = await axios.post(
+                "http://localhost:8000/login",
+                {
+                    email: `${user}`,
+                    password: `${password}`,
+                },
+                {
+                    headers: {
+                        'Content-Type': 'application/json; charset=utf-8',
+                    },
+                }
+            );
+
+            if (res.status === 200) {
+
+                setAuth({
+                    ...auth,
+                    userId: res.data._id,
+                    token: res.data.token
+                })
+
+                // SAVE in Local Storage
+                localStorage.setItem('auth',JSON.stringify(res.data));
+                console.log(res.data);
+
+                navigate('/');
+                alert('User exists');
+            }
+
+        } catch (e) {
+            console.log("ERROR: SOMETING WENT WRONG");
+            alert('User does not exist');
+        }
+    }
+
     return (
         <Box>
             {/* For lg and xl */}
@@ -27,8 +74,8 @@ const Login = () => {
                     </Box>
                     <Box marginLeft='15%' marginRight='15%' marginTop='5%'>
                         <Box>
-                            <TextField placeholder='Username' fullWidth='true' sx={{ border: 'none', "& fieldset": { border: 'none' }, marginBottom: '3%' }} className='text-field-auth'></TextField>
-                            <TextField placeholder='Password' fullWidth='true' InputProps={{ endAdornment: (<InputAdornment position='end'><Visibility style={{ color: '#f24e1e' }} /></InputAdornment>) }} sx={{ border: 'none', "& fieldset": { border: 'none' }, }} className='text-field-auth'></TextField>
+                            <TextField placeholder='Username' fullWidth='true' sx={{ border: 'none', "& fieldset": { border: 'none' }, marginBottom: '3%' }} className='text-field-auth' value={user} onChange={(event) => setUser(event.target.value)}></TextField>
+                            <TextField placeholder='Password' fullWidth='true' InputProps={{ endAdornment: (<InputAdornment position='end'><Visibility style={{ color: '#f24e1e' }} /></InputAdornment>) }} sx={{ border: 'none', "& fieldset": { border: 'none' }, }} className='text-field-auth' value={password} onChange={(event) => setPassword(event.target.value)}></TextField>
                         </Box>
                         <Box display='flex' justifyContent='space-between' marginTop='3%' marginBottom='3%'>
                             <Box display='flex' alignItems='center'>
@@ -41,7 +88,7 @@ const Login = () => {
                         </Box>
                         <Box>
                             <Box marginBottom='4%'>
-                                <Button style={{ backgroundColor: '#f24e1e', color: 'white', width: '100%', borderRadius: '20px', textTransform: 'none' }}>
+                                <Button onClick={login_user} style={{ backgroundColor: '#f24e1e', color: 'white', width: '100%', borderRadius: '20px', textTransform: 'none' }}>
                                     <Typography fontWeight='bold'>Log In</Typography>
                                 </Button>
                             </Box>
@@ -100,7 +147,7 @@ const Login = () => {
                         </Box>
                         <Box>
                             <Box marginBottom='7%'>
-                                <Button style={{ backgroundColor: '#f24e1e', color: 'white', width: '100%', borderRadius: '20px', textTransform: 'none' }}>
+                                <Button onClick={login_user} style={{ backgroundColor: '#f24e1e', color: 'white', width: '100%', borderRadius: '20px', textTransform: 'none' }}>
                                     <Typography fontWeight='bold'>Log In</Typography>
                                 </Button>
                             </Box>
@@ -156,7 +203,7 @@ const Login = () => {
                         </Box>
                         <Box>
                             <Box marginBottom='7%'>
-                                <Button style={{ backgroundColor: '#f24e1e', color: 'white', width: '100%', borderRadius: '20px', textTransform: 'none' }}>
+                                <Button onClick={login_user} style={{ backgroundColor: '#f24e1e', color: 'white', width: '100%', borderRadius: '20px', textTransform: 'none' }}>
                                     <Typography fontWeight='bold'>Log In</Typography>
                                 </Button>
                             </Box>

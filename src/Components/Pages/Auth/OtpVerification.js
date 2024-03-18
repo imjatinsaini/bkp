@@ -1,11 +1,18 @@
-import { Google, Visibility } from '@mui/icons-material'
-import { Box, Button, Checkbox, Grid, IconButton, Input, InputAdornment, TextField, Typography } from '@mui/material'
+import { Box, Button, Grid, IconButton, TextField, Typography } from '@mui/material'
 import React, { useState } from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
+import axios from 'axios';
 
 const OtpVerification = () => {
 
+    const navigate = useNavigate();
+
     const [otp, setOtp] = useState(['', '', '', '', '', '']);
+
+    // OTP Password to be send to API
+    const [pin, setPin] = useState('');
+
+    const tempId = localStorage.getItem('tempId');
 
     const handleChange = (index, event) => {
         // Allow only numbers
@@ -13,6 +20,7 @@ const OtpVerification = () => {
 
         const newOtp = [...otp];
         newOtp[index] = newChar; // Update with allowed number
+
         setOtp(newOtp);
 
         // Move focus to the next field if current field is full
@@ -24,11 +32,46 @@ const OtpVerification = () => {
             } else {
                 // Remove focus if last field is full
                 event.target.blur();
+                setPin(newOtp.join(''));
             }
         }
     };
 
+    const verify_user = async () => {
+        try {
+
+            const res = await axios.post(
+                "http://localhost:8000/verify-otp",
+                {
+                    userId: tempId,
+                    otp: pin
+                },
+                {
+                    headers: {
+                        'Content-Type': 'application/json; charset=utf-8',
+                    },
+                }
+            );
+
+            console.log(res);
+
+            if (res.status === 200) {
+                console.log("HErER");
+                alert("Login to continue");
+
+                //   Delete the tempId
+                localStorage.removeItem('tempId');
+
+                navigate('/login');
+            }
+
+        } catch (e) {
+            console.log("ERROR: SOMETING WENT WRONG");
+        }
+    }
+
     return (
+
         <Box>
             {/* For lg and xl */}
             <Grid container display={{ xs: 'none', sm: 'none', md: 'none', lg: 'flex', xl: 'flex' }}>
@@ -72,7 +115,7 @@ const OtpVerification = () => {
 
                         <Box>
                             <Box marginBottom='4%'>
-                                <Button style={{ backgroundColor: '#f24e1e', color: 'white', width: '100%', borderRadius: '20px', textTransform: 'none' }}>
+                                <Button onClick={verify_user} style={{ backgroundColor: '#f24e1e', color: 'white', width: '100%', borderRadius: '20px', textTransform: 'none' }}>
                                     <Typography fontWeight='bold'>Verify</Typography>
                                 </Button>
                             </Box>
@@ -123,7 +166,7 @@ const OtpVerification = () => {
                                 ))}
                             </Box>
                             <Box marginBottom='7%'>
-                                <Button style={{ backgroundColor: '#f24e1e', color: 'white', width: '100%', borderRadius: '20px', textTransform: 'none' }}>
+                                <Button onClick={verify_user} style={{ backgroundColor: '#f24e1e', color: 'white', width: '100%', borderRadius: '20px', textTransform: 'none' }}>
                                     <Typography fontWeight='bold'>Verify</Typography>
                                 </Button>
                             </Box>
@@ -146,7 +189,7 @@ const OtpVerification = () => {
                         <Box sx={{ width: 58, height: 62 }} component="img" alt="Cart" src="/images/logo.png" />
                         <NavLink to='/' style={{ textDecoration: 'none' }}>
                             <Typography className='nav-logo-text'>भगवान का प्रसाद</Typography>
-                        </NavLink>  
+                        </NavLink>
                     </Box>
                     <Box display='flex' flexDirection='column' alignItems='center' marginTop='5%' marginBottom='10%'>
                         <Typography fontSize='48px'>Email Verification</Typography>
@@ -173,7 +216,7 @@ const OtpVerification = () => {
                                 ))}
                             </Box>
                             <Box marginBottom='7%'>
-                                <Button style={{ backgroundColor: '#f24e1e', color: 'white', width: '100%', borderRadius: '20px', textTransform: 'none' }}>
+                                <Button onClick={verify_user} style={{ backgroundColor: '#f24e1e', color: 'white', width: '100%', borderRadius: '20px', textTransform: 'none' }}>
                                     <Typography fontWeight='bold'>Verify</Typography>
                                 </Button>
                             </Box>

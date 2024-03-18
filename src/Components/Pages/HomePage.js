@@ -11,12 +11,18 @@ import TourGuide from '../Widgets/HomeWidgets/TourGuide';
 import WellnessPractice from '../Widgets/HomeWidgets/WellnessPractice';
 import Footer from '../Widgets/HomeWidgets/Footer';
 import NewNavbar from '../Layout/NewNavbar';
+import { useAuth } from '../../Context/authContext';
 
 const HomePage = () => {
+
+  const [auth,setAuth] = useAuth();
 
   return (
     <Box bgcolor='#f8f7f4'>
       {/* <Navbar /> */}
+      {/* <Box>
+        <pre>{JSON.stringify(auth, null, 4)}</pre>
+      </Box> */}
       <NewNavbar />
       <CarouselSlider />
       <Searchbar />

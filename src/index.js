@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, useLocation } from 'react-router-dom';
+import { AuthProvider } from './Context/authContext';
 
 function ScrollToTopOnMount() {
   const { pathname } = useLocation();
@@ -17,10 +18,12 @@ function ScrollToTopOnMount() {
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <BrowserRouter>
-    <ScrollToTopOnMount />
-    <App />
-  </BrowserRouter>
+  <AuthProvider>
+    <BrowserRouter>
+      <ScrollToTopOnMount />
+      <App />
+    </BrowserRouter>
+  </AuthProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function
