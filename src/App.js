@@ -46,6 +46,8 @@ import Spiritual from './Components/Pages/Shop/ShopPages/SpiritualAccessories';
 import PujaSamagri from './Components/Pages/Shop/ShopPages/Pujasamagri';
 import Donationcomingsoon from './Components/Pages/Donationcomingsoon/Donationcomingsoon';
 import Healthandimmunity from './Components/Pages/Shop/ShopPages/Healthandimmunity';
+import Yogamain from './Components/Pages/Yoga/yogamain';
+import Sirasana from './Components/Pages/Yoga/asanas/sirasana';
 
 
 
@@ -111,8 +113,9 @@ function App() {
         <Route path='/shops-healthandimmunity' element={<Healthandimmunity/>} />
 
 
-
-
+        {/* Yoga routes */}
+        <Route path='/yogamain' element={<Yogamain/>} />
+        <Route path='/sirasana' element={<Sirasana/>} />
 
 
         <Route path='/donationcomingsoon' element={<Donationcomingsoon/>} />
