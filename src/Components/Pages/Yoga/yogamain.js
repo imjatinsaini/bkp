@@ -63,7 +63,7 @@ const Yogamain = () => {
                         </Grid>
                         <Grid item xs={0.5}></Grid>
                         <Grid item xs={3.3}>
-                        <YogaCard imageSrc='images/yoga/asanas/sarvangasana.png' asanname='Sarvangasana (सर्वांगासन)'></YogaCard>
+                        <YogaCard to='/sarvangasana' imageSrc='images/yoga/asanas/sarvangasana.png' asanname='Sarvangasana (सर्वांगासन)'></YogaCard>
                         </Grid>
                         
                     </Box>
@@ -109,7 +109,7 @@ const Yogamain = () => {
 
                         <Grid item xs={0.5}></Grid>
                         <Grid item xs={3.3}>
-                            <YogaCard imageSrc='images/yoga/asanas/mayurasana.png' asanname='Mayurasana (मयूरासन)'></YogaCard>
+                            <YogaCard imageSrc='images/yoga/asanas/Mayurasana.png' asanname='Mayurasana (मयूरासन)'></YogaCard>
                         </Grid>
                         <Grid item xs={0.5}></Grid>
                         <Grid item xs={3.3}>

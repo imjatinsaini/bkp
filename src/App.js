@@ -48,6 +48,7 @@ import Donationcomingsoon from './Components/Pages/Donationcomingsoon/Donationco
 import Healthandimmunity from './Components/Pages/Shop/ShopPages/Healthandimmunity';
 import Yogamain from './Components/Pages/Yoga/yogamain';
 import Sirasana from './Components/Pages/Yoga/asanas/sirasana';
+import Sarvangasana from './Components/Pages/Yoga/asanas/sarvangasana';
 
 
 
@@ -116,6 +117,7 @@ function App() {
         {/* Yoga routes */}
         <Route path='/yogamain' element={<Yogamain/>} />
         <Route path='/sirasana' element={<Sirasana/>} />
+        <Route path='/sarvangasana' element={<Sarvangasana/>} />
 
 
         <Route path='/donationcomingsoon' element={<Donationcomingsoon/>} />
